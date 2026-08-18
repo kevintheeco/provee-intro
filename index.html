@@ -213,6 +213,8 @@
   .posbig .a3{font-family:var(--en); font-size:clamp(30px,4vw,44px); font-weight:700; color:var(--wine); letter-spacing:-.02em;}
   .posbig .a4{font-size:14.5px; line-height:1.85; color:var(--ink2);}
   .posbig .a4 b{color:var(--ink); font-weight:700;}
+  .posbig.wide{margin-top:26px; gap:20px 48px;}
+  @media(min-width:780px){ .posbig.wide{grid-template-columns:auto 1fr; align-items:center;} }
 
   /* BM 흐름 */
   .flow{margin-top:34px; display:grid; gap:12px; align-items:stretch;}
@@ -299,6 +301,74 @@
   .prow .t{font-size:15px; font-weight:700;}
   .prow .t span{display:block; font-size:13px; font-weight:400; color:var(--muted); margin-top:3px;}
   .prow .v{font-family:var(--en); font-size:19px; font-weight:700; color:var(--wine); white-space:nowrap;}
+
+
+  /* ── 네이티브 도식 ── */
+  .venn{position:relative; max-width:640px; margin:40px auto 0; aspect-ratio:1/1.02;}
+  .venn .cir{position:absolute; width:62%; aspect-ratio:1; border-radius:50%; mix-blend-mode:multiply;}
+  .venn .c1{left:19%; top:2%; background:rgba(196,101,80,.40);}
+  .venn .c2{left:0; top:37%; background:rgba(74,122,120,.40);}
+  .venn .c3{left:38%; top:37%; background:rgba(150,140,74,.40);}
+  .venn .axis{position:absolute; font-weight:800; font-size:clamp(13px,2.2vw,17px); line-height:1.3; letter-spacing:-.02em; z-index:3;}
+  .venn .a1{top:-4.5%; left:50%; transform:translateX(-50%); color:#B14A38; text-align:center; white-space:nowrap;}
+  .venn .a2{bottom:0; left:1%; color:#3E6B69;}
+  .venn .a3{bottom:0; right:1%; color:#7A7040; text-align:right;}
+  .venn .chip{position:absolute; transform:translate(-50%,-50%); background:#FFFDF8; border-radius:999px;
+    padding:.42em 1em; font-size:clamp(10px,1.6vw,13.5px); font-weight:700; color:#2A2420;
+    box-shadow:0 2px 8px rgba(30,24,17,.16); white-space:nowrap; z-index:2;}
+  .venn .me{position:absolute; left:50%; top:50.5%; transform:translate(-50%,-50%);
+    width:20%; aspect-ratio:1; border-radius:50%; background:var(--wine-deep);
+    display:grid; place-content:center; text-align:center; color:#FFF1EE;
+    box-shadow:0 14px 30px -12px rgba(94,18,32,.55); z-index:1;}
+  .venn .me b{font-family:var(--wm); font-size:clamp(13px,2.1vw,18px); letter-spacing:-.02em;}
+  .venn .me span{display:block; font-size:clamp(8px,1.2vw,10.5px); opacity:.85; margin-top:2px;}
+
+  .chartcard{margin-top:30px; border-radius:18px; background:var(--card); box-shadow:var(--soft); padding:20px 18px 12px;}
+  .chartcard .ct2{font-size:14.5px; font-weight:800; letter-spacing:-.02em;}
+  .chartcard .cs2{font-size:11.5px; color:var(--muted); margin-top:2px;}
+  .chartcard svg{width:100%; height:auto; display:block; margin-top:8px;}
+  .legend{display:flex; gap:16px; flex-wrap:wrap; margin-top:6px; padding:0 4px 6px; font-size:12px; color:var(--ink2);}
+  .legend i{display:inline-block; width:16px; height:3px; border-radius:2px; vertical-align:middle; margin-right:6px;}
+
+  .darkchart{margin-top:30px; border-radius:20px; background:#221B15; padding:24px 20px 14px; box-shadow:var(--deep);}
+  .darkchart .ct2{font-size:13.5px; font-weight:800; color:#F3EAD8; letter-spacing:-.02em;}
+  .darkchart .cs2{font-size:11.5px; color:#8F8370; margin-top:2px;}
+  .darkchart svg{width:100%; height:auto; display:block; margin-top:6px;}
+
+  .misread{display:flex; align-items:stretch; gap:8px;}
+  .misread .mr{flex:1; background:var(--paper2); border-radius:10px; padding:9px 8px 10px; text-align:center;
+    display:flex; flex-direction:column; gap:6px; justify-content:center;}
+  .misread .mr .lb2{font-size:10px; font-weight:700; color:var(--muted);}
+  .misread .mr .lb2.bad{color:var(--wine);}
+  .misread .mr img{max-height:40px; width:auto; margin:0 auto; mix-blend-mode:multiply;}
+  .misread .mr code{font-family:var(--en); font-size:15px; color:var(--ink);}
+  .misread .arr2{align-self:center; color:var(--wine); font-weight:700;}
+
+  .chatmock{background:var(--paper2); border-radius:12px; padding:12px; display:grid; gap:8px;}
+  .chatmock .cbub{justify-self:end; background:#FFFDF8; border-radius:10px 10px 2px 10px; padding:6px 11px;
+    font-size:12px; font-weight:600; box-shadow:0 1px 3px rgba(30,24,17,.1);}
+  .chatmock .cans{background:#FFFDF8; border-radius:10px; padding:11px 12px; display:grid; gap:6px;
+    box-shadow:0 1px 3px rgba(30,24,17,.08);}
+  .chatmock .cans b{font-size:13px;}
+  .chatmock .cans i{display:block; height:6px; border-radius:3px; background:var(--line2);}
+
+  .resetsvg{background:var(--paper2); border-radius:12px; padding:10px 8px 6px;}
+  .resetsvg svg{width:100%; height:auto; display:block;}
+
+  .tcards{display:grid; gap:12px;}
+  .tcard1{background:var(--card); border-radius:16px; padding:18px 20px 16px; box-shadow:var(--soft);}
+  .tcard1 .tk{font-size:11px; font-weight:800; color:var(--wine); letter-spacing:.06em;}
+  .tcard1 .tq{margin-top:8px; font-size:16.5px; font-weight:800; line-height:1.55; letter-spacing:-.02em;}
+  .tcard1 .tq b{color:var(--wine-deep);}
+  .tcard1 .ts{margin-top:6px; font-size:13px; color:var(--ink2);}
+  .tcard1 .tm{margin-top:11px; font-size:11.5px; color:var(--muted); display:flex; gap:10px; align-items:center; flex-wrap:wrap;}
+  .tcard1 .tag{background:var(--wine-tint); color:var(--wine); font-weight:800; padding:3px 10px; border-radius:999px; font-size:11px;}
+
+  .netcard{background:var(--card); border-radius:16px; padding:16px 12px 8px; box-shadow:var(--soft);}
+  .netcard .ct2{font-size:13.5px; font-weight:800; letter-spacing:-.02em; padding:0 6px;}
+  .netcard svg{width:100%; height:auto; display:block;}
+  .netlegend{display:flex; gap:14px; flex-wrap:wrap; padding:2px 6px 8px; font-size:11.5px; color:var(--ink2);}
+  .netlegend i{display:inline-block; width:11px; height:11px; border-radius:50%; vertical-align:-1px; margin-right:5px;}
 
   /* 해자 3층 */
   .moat{margin-top:34px; display:grid; gap:14px;}
@@ -456,7 +526,8 @@
 <section class="sec up" id="problem">
   <div class="wrap col">
     <div class="no"><b>02 — PROBLEM</b><span></span></div>
-    <h3>교실에서 이미<br /><em>벌어지고 있는 일입니다.</em></h3>
+    <h3>둘째 수민이는,<br /><em>지금 전국의 교실에 있습니다.</em></h3>
+    <p class="sub">이야기가 아닙니다. 답은 3초 만에 받지만 설명은 못 하는 아이들을, 교단이 먼저 알아보고 있었습니다.</p>
 
     <div class="interview">
       <div class="tx">
@@ -468,24 +539,56 @@
       <div class="ph"><img src="assets/fig/fig-teacher.jpg" alt="어두운 교실에 앉아 있는 수학교사" loading="lazy" /></div>
     </div>
 
-    <p class="sub" style="margin-top:44px;">기존 AI로 수학을 공부하면, 학생은 <b>세 곳에서 멈춥니다.</b></p>
+    <p class="sub" style="margin-top:44px;">학생들이 기대는 그 AI는, 정작 수학 앞에서 <b>세 곳에서 멈춥니다.</b></p>
     <div class="p3">
       <div class="pc">
         <div class="n5">01 손글씨</div>
         <h5>손글씨도 도형도 그래프도 읽지 못합니다</h5>
-        <figure class="fx" data-full="assets/fig/fig-p-hand.jpg"><img src="assets/fig/fig-p-hand.jpg" alt="학생이 쓴 식과 AI가 잘못 읽은 식" loading="lazy" /></figure>
-        <p class="d5">학생이 쓴 log₂(2z)를 log₂(22)로 읽습니다. 재구성 화면(illustrative reconstruction)입니다.</p>
+        <div class="misread">
+          <div class="mr">
+            <span class="lb2">학생이 쓴 것</span>
+            <img src="assets/fig/fig-hand-formula.jpg" alt="손글씨 log₂(2z)=4" loading="lazy" />
+          </div>
+          <span class="arr2">→</span>
+          <div class="mr">
+            <span class="lb2 bad">AI가 읽은 것</span>
+            <code>log₂(22) = 4</code>
+          </div>
+        </div>
+        <p class="d5">2z를 22로 읽고, 확신에 찬 목소리로 틀린 답을 설명합니다. 재구성 화면입니다.</p>
       </div>
       <div class="pc">
         <div class="n5">02 상호작용</div>
         <h5>답만 주고 내가 이해했는지 묻지 않습니다</h5>
-        <figure class="fx" data-full="assets/fig/fig-p-chat.jpg"><img src="assets/fig/fig-p-chat.jpg" alt="질문 한 줄에 스크롤이 필요한 답변" loading="lazy" /></figure>
+        <div class="chatmock">
+          <div class="cbub">이거 왜 이렇게 돼요?</div>
+          <div class="cans"><b>정답 x = 2</b><i></i><i></i><i></i><i style="width:72%"></i></div>
+        </div>
         <p class="d5">질문 한 줄에, 스크롤이 필요한 답변. 학생이 멈춰 서서 생각할 자리가 없습니다.</p>
       </div>
       <div class="pc">
         <div class="n5">03 지속성</div>
         <h5>얼마 지나면 나를 잊어버립니다</h5>
-        <figure class="fx" data-full="assets/fig/fig-p-memory.jpg"><img src="assets/fig/fig-p-memory.jpg" alt="새 대화마다 맥락이 리셋되는 구조" loading="lazy" /></figure>
+        <div class="resetsvg">
+          <svg viewBox="0 0 300 128" role="img" aria-label="새 대화마다 맥락이 0에서 다시 시작하는 구조">
+            <g stroke="#2A2420" stroke-width="2" fill="none" stroke-linecap="round">
+              <path d="M18 104 L84 40" /><path d="M104 104 L170 40" /><path d="M190 104 L256 40" />
+            </g>
+            <g stroke="#B14A38" stroke-width="1.6" stroke-dasharray="4 4" fill="none">
+              <path d="M84 40 L84 104" /><path d="M170 40 L170 104" />
+            </g>
+            <circle cx="84" cy="40" r="3.5" fill="#B14A38" /><circle cx="170" cy="40" r="3.5" fill="#B14A38" />
+            <circle cx="256" cy="40" r="3.5" fill="#2A2420" />
+            <circle cx="84" cy="104" r="3" fill="none" stroke="#B14A38" stroke-width="1.6" />
+            <circle cx="170" cy="104" r="3" fill="none" stroke="#B14A38" stroke-width="1.6" />
+            <g font-size="10.5" fill="#8A7E6A" text-anchor="middle" font-weight="600">
+              <text x="50" y="121">대화 1</text><text x="136" y="121">새 대화</text><text x="222" y="121">새 대화</text>
+            </g>
+            <g font-size="10" fill="#B14A38" text-anchor="middle" font-weight="700">
+              <text x="84" y="28">리셋</text><text x="170" y="28">리셋</text>
+            </g>
+          </svg>
+        </div>
         <p class="d5">새 대화를 열면 맥락은 0에서 다시 시작. 잊혀진 정보를 추론으로 채우다 할루시네이션이 생깁니다.</p>
       </div>
     </div>
@@ -496,7 +599,8 @@
 <section class="sec tint up" id="solution">
   <div class="wrap col">
     <div class="no"><b>03 — SOLUTION</b><span></span></div>
-    <h3>세 곳 모두에서,<br /><em>다르게 만듭니다.</em></h3>
+    <h3>그래서 Provee는, 멈추는<br /><em>세 곳을 다시 만들었습니다.</em></h3>
+    <p class="sub">손글씨 · 상호작용 · 지속성 — 순서대로 보여드립니다. 전부 실제 화면입니다.</p>
 
     <div class="solhead" style="margin-top:40px;">
       <div class="sn">01 손글씨</div>
@@ -543,12 +647,90 @@
     </div>
     <div class="g2">
       <div>
-        <figure class="fx" data-full="assets/fig/fig-m-cards.jpg"><img src="assets/fig/fig-m-cards.jpg" alt="지난 풀이의 습관을 기억해 먼저 꺼내는 선생님의 도움" loading="lazy" /></figure>
+        <div class="tcards">
+          <div class="tcard1">
+            <div class="tk">선생님의 도움</div>
+            <p class="tq">수민! 그저께 풀었던 f(−x) = f(x), <b>우함수 기억 안 나?</b></p>
+            <p class="ts">이번 기회에 다시 잡고 가자. 오답노트에 넣어둘게.</p>
+            <div class="tm">3일 전 · 함수의 대칭 · 같은 실수 2회</div>
+          </div>
+          <div class="tcard1">
+            <div class="tk">선생님의 도움</div>
+            <p class="tq">요즘 부호 실수가 잦아. <b>이항할 때 부호부터 확인하자.</b></p>
+            <p class="ts">지난 다섯 문제 중 세 번이 같은 자리였어.</p>
+            <div class="tm"><span class="tag">습관 감지 — 부호</span> 최근 7일 · 오류 유형 분석</div>
+          </div>
+        </div>
         <p class="fxc">그저께 풀었던 우함수, 반복되는 부호 실수 — <b>습관 감지</b></p>
       </div>
       <div>
-        <figure class="fx" data-full="assets/fig/fig-m-map.jpg"><img src="assets/fig/fig-m-map.jpg" alt="공부할수록 채워지는 개념지도" loading="lazy" /></figure>
-        <p class="fxc">공부할수록 채워지는 <b>개념지도</b> — 개념·연결·가중치는 실제 데이터, 숙련도 색은 예시</p>
+        <div class="netcard">
+          <div class="ct2">공부할수록 채워지는 개념지도</div>
+          <svg viewBox="0 0 400 322" role="img" aria-label="개념 사이의 선수학습 관계 지도">
+            <g stroke="#DCD2BE" stroke-width="1">
+              <line x1="150" y1="28" x2="238" y2="52" /><line x1="238" y1="52" x2="330" y2="62" />
+              <line x1="150" y1="28" x2="158" y2="92" /><line x1="158" y1="92" x2="216" y2="120" />
+              <line x1="238" y1="52" x2="216" y2="120" /><line x1="330" y1="62" x2="306" y2="110" />
+              <line x1="306" y1="110" x2="216" y2="120" /><line x1="306" y1="110" x2="296" y2="172" />
+              <line x1="216" y1="120" x2="216" y2="158" /><line x1="96" y1="148" x2="216" y2="158" />
+              <line x1="96" y1="148" x2="40" y2="182" /><line x1="216" y1="158" x2="296" y2="172" />
+              <line x1="216" y1="158" x2="232" y2="196" /><line x1="296" y1="172" x2="322" y2="214" />
+              <line x1="232" y1="196" x2="322" y2="214" /><line x1="40" y1="182" x2="108" y2="232" />
+              <line x1="108" y1="232" x2="82" y2="268" /><line x1="108" y1="232" x2="180" y2="268" />
+              <line x1="82" y1="268" x2="180" y2="268" /><line x1="180" y1="268" x2="268" y2="258" />
+              <line x1="322" y1="214" x2="268" y2="258" /><line x1="232" y1="196" x2="180" y2="268" />
+              <line x1="306" y1="110" x2="322" y2="214" /><line x1="44" y1="36" x2="150" y2="28" />
+            </g>
+            <g>
+              <circle cx="44" cy="36" r="4" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1" />
+              <circle cx="360" cy="28" r="4" fill="#DDD5C4" />
+              <circle cx="376" cy="142" r="5" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1" />
+              <circle cx="30" cy="300" r="4" fill="#DDD5C4" />
+              <circle cx="352" cy="298" r="4" fill="#7E1F2C" />
+              <circle cx="150" cy="28" r="9" fill="#7E1F2C" />
+              <circle cx="238" cy="52" r="10" fill="#7E1F2C" />
+              <circle cx="330" cy="62" r="9" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1.4" />
+              <circle cx="158" cy="92" r="9" fill="#7E1F2C" />
+              <circle cx="306" cy="110" r="12" fill="#7E1F2C" />
+              <circle cx="216" cy="120" r="11" fill="#7E1F2C" />
+              <circle cx="96" cy="148" r="8" fill="#F6E9E2" stroke="#E86030" stroke-width="2.4" />
+              <circle cx="216" cy="158" r="9" fill="#7E1F2C" />
+              <circle cx="296" cy="172" r="9" fill="#7E1F2C" />
+              <circle cx="40" cy="182" r="7" fill="#F6E9E2" stroke="#E86030" stroke-width="2.4" />
+              <circle cx="232" cy="196" r="8" fill="#7E1F2C" />
+              <circle cx="322" cy="214" r="10" fill="#7E1F2C" />
+              <circle cx="108" cy="232" r="9" fill="#7E1F2C" />
+              <circle cx="82" cy="268" r="10" fill="#7E1F2C" />
+              <circle cx="180" cy="268" r="9" fill="#7E1F2C" />
+              <circle cx="268" cy="258" r="8" fill="#DDD5C4" />
+            </g>
+            <g font-size="9" fill="#5C534B">
+              <text x="163" y="26">일차함수</text>
+              <text x="251" y="50">미분계수와 도함수</text>
+              <text x="342" y="60">함수의 극한</text>
+              <text x="171" y="90">도함수의 활용</text>
+              <text x="320" y="108">함수</text>
+              <text x="230" y="118">이차함수</text>
+              <text x="109" y="146" fill="#C4520A" font-weight="700">여러 가지 부등식</text>
+              <text x="229" y="156">이차방정식과 이차함수</text>
+              <text x="308" y="170">이차방정식</text>
+              <text x="52" y="180" fill="#C4520A" font-weight="700">일차부등식</text>
+              <text x="244" y="194">복소수</text>
+              <text x="335" y="212">제곱근</text>
+              <text x="120" y="230">일차방정식</text>
+              <text x="95" y="266">문자식</text>
+              <text x="192" y="266">다항식의 계산</text>
+              <text x="280" y="256">지수와 로그</text>
+            </g>
+          </svg>
+          <div class="netlegend">
+            <span><i style="background:#7E1F2C;"></i>익혔다</span>
+            <span><i style="background:#E8C9C4; box-shadow:inset 0 0 0 1.5px #8A1C2B;"></i>익히는 중</span>
+            <span><i style="background:#DDD5C4;"></i>아직</span>
+            <span><i style="background:#F6E9E2; box-shadow:inset 0 0 0 2px #E86030;"></i>다시 봐야 할 곳</span>
+          </div>
+        </div>
+        <p class="fxc">개념·연결·가중치는 실제 데이터, 숙련도 색은 예시</p>
       </div>
     </div>
     <p class="pnote">교육과정은 15과목 · 111개 대단원 · 481개 소단원까지 분해해 두었고, 개념지도가 그 위에서 움직입니다.</p>
@@ -596,10 +778,28 @@
   <div class="wrap col">
     <div class="no"><b>05 — COMPETITIVE LANDSCAPE</b><span></span></div>
     <h3>세 축을 하나의 학습 흐름으로<br /><em>잇는 자리를 증명하려 합니다.</em></h3>
-    <p class="sub"><b>단계적 상호작용 · 손풀이 인식 · 지속적 기억.</b> 교육 AI가 "잘한다"고 말하는 것을 세 축으로 나누고,
-      그 위에 회사들을 놓았습니다.</p>
-    <figure class="fx" style="margin-top:30px;" data-full="assets/fig/fig-venn.jpg"><img src="assets/fig/fig-venn.jpg" alt="세 축 위 경쟁 지형 벤다이어그램" loading="lazy" /></figure>
-    <p class="fxc">2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다. 세 축의 정의와 판정 기준은 자체 기준입니다.</p>
+    <p class="sub">이 문제를 보고 있는 회사는 많고, 각자 한두 축은 잘합니다. 교육 AI가 "잘한다"고 말하는 것을
+      <b>단계적 상호작용 · 손풀이 인식 · 지속적 기억</b> 세 축으로 나누고, 그 위에 회사들을 놓았습니다.</p>
+    <div class="venn" role="img" aria-label="단계적 상호작용, 손풀이 인식, 지속적 기억 세 축 위의 경쟁 지형">
+      <div class="axis a1">단계적 상호작용</div>
+      <div class="cir c1"></div><div class="cir c2"></div><div class="cir c3"></div>
+      <div class="axis a2">손풀이<br />인식</div>
+      <div class="axis a3">지속적<br />기억</div>
+      <span class="chip" style="left:50%; top:24.5%;">Khanmigo</span>
+      <span class="chip" style="left:50%; top:32%;">ChatGPT</span>
+      <span class="chip" style="left:36%; top:43.5%;">스터디에이</span>
+      <span class="chip" style="left:65.5%; top:40%;">Mathspace</span>
+      <span class="chip" style="left:67%; top:46.5%;">Synthesis</span>
+      <span class="chip" style="left:29.5%; top:55%;">콴다</span>
+      <span class="chip" style="left:29%; top:61.5%;">Photomath</span>
+      <span class="chip" style="left:28.5%; top:68%;">MyScript</span>
+      <span class="chip" style="left:29%; top:74.5%;">수학대왕</span>
+      <span class="chip" style="left:66.5%; top:57%;">ALEKS</span>
+      <span class="chip" style="left:67.5%; top:63.5%;">Squirrel</span>
+      <span class="chip" style="left:66.5%; top:70%;">뤼이드</span>
+      <div class="me"><div><b>Provee</b><span>3축 모두 ○</span></div></div>
+    </div>
+    <p class="fxc" style="margin-top:22px;">2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다. 세 축의 정의와 판정 기준은 자체 기준입니다.</p>
   </div>
 
   <div class="wrap col" style="margin-top:56px;">
@@ -643,12 +843,42 @@
   <div class="wrap col">
     <div class="no"><b>06 — MARKET</b><span></span></div>
     <h3>남은 자도, 떠난 자도 —<br /><em>모두 잠재 수요로 봅니다.</em></h3>
-    <p class="sub">2025년, 수학 사교육 참여율은 꺾였는데 남은 학생의 1인 지출은 계속 올랐습니다.
-      <b>시장은 줄어든 게 아니라 둘로 갈라졌습니다.</b></p>
+    <p class="sub">경쟁이 몰린다는 건 판이 크다는 뜻입니다. 2025년, 수학 사교육 참여율은 꺾였는데
+      남은 학생의 1인 지출은 계속 올랐습니다. <b>시장은 줄어든 게 아니라 둘로 갈라졌습니다.</b></p>
 
     <div class="g2" style="align-items:center;">
       <div>
-        <figure class="fx" data-full="assets/fig/fig-market.jpg"><img src="assets/fig/fig-market.jpg" alt="고교 수학 시장 참여율과 지출 추이" loading="lazy" /></figure>
+        <div class="chartcard">
+          <div class="ct2">고교 수학 시장 Breakdown</div>
+          <div class="cs2">지수 · 2016 = 100 · 출처: 「2025년 초중고사교육비조사」</div>
+          <svg viewBox="0 0 560 292" role="img" aria-label="수학 사교육 참여율과 1인 지출 추이">
+            <g stroke="#EFE7D8" stroke-width="1">
+              <line x1="42" y1="210" x2="520" y2="210" /><line x1="42" y1="167" x2="520" y2="167" />
+              <line x1="42" y1="124" x2="520" y2="124" /><line x1="42" y1="81" x2="520" y2="81" />
+              <line x1="42" y1="38" x2="520" y2="38" />
+            </g>
+            <path d="M455 92 L505 92 L505 139 Z" fill="rgba(178,74,56,.14)" />
+            <path d="M60 210 L159 184 L258 158 L356 124 L455 86 L505 58" fill="none" stroke="#8A7E6A" stroke-width="2.4" stroke-linecap="round" />
+            <path d="M60 210 L109 193 L159 180 L208 189 L258 172 L307 150 L356 129 L406 108 L455 92 L505 139"
+              fill="none" stroke="#C24A32" stroke-width="2.8" stroke-linecap="round" />
+            <line x1="455" y1="92" x2="505" y2="139" stroke="#C24A32" stroke-width="1.4" stroke-dasharray="4 4" />
+            <circle cx="455" cy="92" r="4.5" fill="#FAF6EC" stroke="#C24A32" stroke-width="2" />
+            <circle cx="505" cy="139" r="4" fill="#C24A32" />
+            <circle cx="505" cy="58" r="4" fill="#8A7E6A" />
+            <text x="514" y="62" font-size="12.5" font-weight="700" fill="#5C534B">135.7</text>
+            <text x="514" y="143" font-size="12.5" font-weight="700" fill="#C24A32">116.9</text>
+            <text x="400" y="185" font-size="17" font-weight="800" fill="#C24A32">−6.3만 명</text>
+            <text x="408" y="202" font-size="10.5" fill="#8A7E6A">2025년 이탈 수요</text>
+            <g font-size="11" fill="#8A7E6A" text-anchor="middle">
+              <text x="60" y="232">2016</text><text x="208" y="232">2019</text>
+              <text x="356" y="232">2022</text><text x="505" y="232">2025</text>
+            </g>
+          </svg>
+          <div class="legend">
+            <span><i style="background:#C24A32;"></i>수학 사교육 참여율</span>
+            <span><i style="background:#8A7E6A;"></i>참여학생 1인 지출액</span>
+          </div>
+        </div>
         <p class="fxc">참여율은 −6.3만 명(2025년 이탈), 1인 지출은 계속 상승</p>
       </div>
       <div class="tsom">
@@ -679,22 +909,58 @@
   <div class="wrap col">
     <div class="no"><b>07 — BUSINESS MODEL</b><span></span></div>
     <h3>과외급 개인화를,<br /><em>인강 아래 가격으로.</em></h3>
+    <p class="sub">갈라진 시장의 빈 자리 — 과외의 개인화와 인강 이하 가격 사이 — 에 우리가 고른 값입니다.</p>
 
-    <div class="g2" style="align-items:center;">
+    <div class="darkchart">
+          <div class="ct2">가격 포지셔닝</div>
+          <div class="cs2">개인화 수준 × 월 지불액 (만원 · 고교 일반교과 참여학생 기준 · 앱은 정가)</div>
+          <svg viewBox="0 0 640 396" role="img" aria-label="개인화 수준과 월 지불액 산점도">
+            <g stroke="rgba(255,255,255,.07)" stroke-width="1">
+              <line x1="118" y1="70" x2="620" y2="70" /><line x1="118" y1="130" x2="620" y2="130" />
+              <line x1="118" y1="212" x2="620" y2="212" /><line x1="118" y1="282" x2="620" y2="282" />
+              <line x1="118" y1="344" x2="620" y2="344" />
+            </g>
+            <g font-size="10.5" fill="#A99A7D">
+              <text x="8" y="66">1:1 과정</text><text x="8" y="80">실시간 개입</text>
+              <text x="8" y="134">1:1 관리</text>
+              <text x="8" y="216">그룹 지도</text>
+              <text x="8" y="278">사후 채점</text><text x="8" y="292">·문제 추천</text>
+              <text x="8" y="340">일방향</text><text x="8" y="354">(강의 시청)</text>
+            </g>
+            <rect x="120" y="42" width="168" height="118" rx="12" fill="rgba(178,74,56,.12)"
+              stroke="#E86030" stroke-width="1.6" stroke-dasharray="6 5" />
+            <text x="204" y="112" font-size="26" fill="#E86030" text-anchor="middle">★</text>
+            <g text-anchor="start">
+              <text x="302" y="62" font-size="11.5" font-weight="800" fill="#E86030">비어 있는 자리</text>
+              <text x="302" y="82" font-size="13" font-weight="800" fill="#F3EAD8">'과외의 개인화 × 인강 이하 가격'</text>
+              <text x="302" y="100" font-size="10.5" fill="#A99A7D">Provee 월 99,000원 · 끈질긴 나만의 선생님</text>
+            </g>
+            <g fill="#F3EAD8" font-weight="700" font-size="11.5">
+              <circle cx="486" cy="70" r="5" /><text x="496" y="74">개인과외 59.1</text>
+              <circle cx="418" cy="212" r="5" /><text x="428" y="206">그룹과외 48.0</text>
+              <circle cx="584" cy="212" r="5" /><text x="592" y="230" text-anchor="end">학원수강 74.8</text>
+              <circle cx="130" cy="212" r="4" fill="#A99A7D" /><text x="139" y="228" font-size="10" fill="#A99A7D">스터디에이 1.65 (중등 한정)</text>
+              <circle cx="140" cy="282" r="4" fill="#A99A7D" /><text x="150" y="286" font-size="10" fill="#A99A7D">수학대왕 2.5~4.6</text>
+              <circle cx="204" cy="344" r="5" /><text x="214" y="348">인강(인터넷·통신) 13.6</text>
+            </g>
+            <line x1="118" y1="368" x2="620" y2="368" stroke="rgba(255,255,255,.15)" />
+            <g font-size="10" fill="#6D6048" text-anchor="middle">
+              <text x="120" y="384">0</text><text x="245" y="384">20</text><text x="370" y="384">40</text>
+              <text x="495" y="384">60</text><text x="620" y="384">80</text>
+            </g>
+          </svg>
+        </div>
+    <p class="fxc">1:1 실시간 개입이면서 인강보다 낮은 가격대 — 출처: 「2025년 초중고사교육비조사」 · 각 사 공시 정가</p>
+
+    <div class="posbig wide">
       <div>
-        <figure class="fx" data-full="assets/fig/fig-position.jpg"><img src="assets/fig/fig-position.jpg" alt="개인화 수준과 월 지불액 위 포지셔닝" loading="lazy" /></figure>
-        <p class="fxc">개인화 수준 × 월 지불액 — 1:1 실시간 개입이면서 인강보다 낮은 가격대</p>
+        <div class="a1">59.1 <span style="color:var(--muted); font-size:.6em;">vs</span> 13.6만 원</div>
+        <div class="a2">개인과외 vs 인강의 월 지불액 격차</div>
       </div>
-      <div class="posbig">
-        <div>
-          <div class="a1">59.1 <span style="color:var(--muted); font-size:.6em;">vs</span> 13.6만 원</div>
-          <div class="a2">개인과외 vs 인강의 월 지불액 격차</div>
-        </div>
-        <div>
-          <div class="a3">월 99,000원</div>
-          <div class="a4">개인화는 과외급으로, 가격은 인강 아래로 —
-            <b>개인화에 동행하는 가격 상승이라는 기존 공식을 깹니다.</b></div>
-        </div>
+      <div>
+        <div class="a3">월 99,000원</div>
+        <div class="a4">개인화는 과외급으로, 가격은 인강 아래로 —
+          <b>개인화에 동행하는 가격 상승이라는 기존 공식을 깹니다.</b></div>
       </div>
     </div>
     <p class="pnote">개인과외 59.1만 · 학원 74.8만 · 인강 13.6만은 고교 일반교과 참여학생 기준 통계이고 Provee는 수학 단과 정가라,
