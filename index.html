@@ -370,6 +370,40 @@
   .netlegend{display:flex; gap:14px; flex-wrap:wrap; padding:2px 6px 8px; font-size:11.5px; color:var(--ink2);}
   .netlegend i{display:inline-block; width:11px; height:11px; border-radius:50%; vertical-align:-1px; margin-right:5px;}
 
+
+  /* 4축 정의 */
+  .axg{margin-top:36px; display:grid; gap:14px;}
+  @media(min-width:860px){ .axg{grid-template-columns:1fr 1fr;} }
+  .ax{border-radius:20px; padding:26px 26px 22px; background:var(--card); box-shadow:var(--soft);}
+  .ax .axn{font-family:var(--en); font-size:12px; font-weight:700; letter-spacing:.18em; color:var(--wine);}
+  .ax h4{margin-top:6px; font-family:var(--kr); font-weight:700; font-size:21px; letter-spacing:-.03em;}
+  .ax ul{margin-top:14px; display:grid; gap:11px;}
+  .ax li{font-size:13.5px; line-height:1.72; color:var(--ink2); padding-left:14px; position:relative;}
+  .ax li::before{content:""; position:absolute; left:0; top:9px; width:5px; height:5px; border-radius:50%; background:var(--wine-line);}
+  .ax li b{display:block; color:var(--ink); font-weight:800; font-size:14px;}
+  .ax li span b{display:inline; color:var(--wine-deep);}
+
+  /* 고객 3군 */
+  .cust{margin-top:26px; display:grid; gap:13px;}
+  @media(min-width:860px){ .cust{grid-template-columns:repeat(3,1fr);} }
+  .cu{border-radius:18px; padding:22px 20px; background:var(--card); box-shadow:var(--soft);}
+  .cu .ck{font-family:var(--en); font-size:11px; font-weight:700; letter-spacing:.16em; color:var(--wine);}
+  .cu h5{margin-top:7px; font-size:17px; font-weight:800; letter-spacing:-.02em;}
+  .cu p{margin-top:9px; font-size:13.5px; line-height:1.75; color:var(--ink2);}
+  .cu p b{color:var(--ink); font-weight:700;}
+
+  /* 정의 카드 */
+  .defn{margin:36px 0 0; border-radius:20px; background:var(--card); box-shadow:var(--soft); overflow:hidden;}
+  .defn .dh{display:flex; align-items:center; gap:12px; padding:13px 24px; background:var(--wine); color:#FFF1EE;}
+  .defn .dh b{font-size:10.5px; font-weight:800; letter-spacing:.2em; text-transform:uppercase;}
+  .defn .dh span{margin-left:auto; font-family:var(--en); font-size:12.5px; opacity:.88;}
+  .defn .db{padding:22px 24px 20px;}
+  .defn .term{font-family:var(--kr); font-weight:400; font-size:clamp(18px,2.6vw,24px); letter-spacing:-.03em; line-height:1.5;}
+  .defn .term em{font-style:normal; color:var(--wine); font-weight:700;}
+  .defn .desc{margin-top:12px; font-size:14.5px; line-height:1.9; color:var(--ink2);}
+  .defn cite{display:block; margin-top:14px; padding-top:12px; border-top:1px solid var(--line2);
+    font-style:normal; font-size:12px; color:var(--muted);}
+
   /* 해자 3층 */
   .moat{margin-top:34px; display:grid; gap:14px;}
   @media(min-width:900px){ .moat{grid-template-columns:repeat(3,1fr);} }
@@ -419,7 +453,7 @@
   @media(min-width:1000px){ .team{grid-template-columns:repeat(3,1fr);} }
   .mem{padding:24px 22px; border-radius:20px; background:var(--card); box-shadow:var(--soft);}
   .mem .hd{display:flex; align-items:center; gap:14px;}
-  .mem .av{width:54px; height:54px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+  .mem .av{width:56px; height:56px; border-radius:14px; overflow:hidden; flex:0 0 auto;
     box-shadow:inset 0 0 0 1.5px var(--wine); background:var(--paper2);}
   .mem .av img{width:100%; height:100%; object-fit:cover; display:block;}
   .mem .nm{font-size:16px; font-weight:800; letter-spacing:-.02em;}
@@ -431,7 +465,7 @@
   .advisor{margin-top:13px; padding:26px 26px 24px; border-radius:20px; background:var(--card2);
     box-shadow:inset 0 0 0 1px var(--line); border-left:3px solid var(--wine);}
   .advisor .hd{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
-  .advisor .av{width:58px; height:58px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+  .advisor .av{width:60px; height:60px; border-radius:14px; overflow:hidden; flex:0 0 auto;
     box-shadow:inset 0 0 0 1.5px var(--wine); background:var(--paper2);}
   .advisor .av img{width:100%; height:100%; object-fit:cover; display:block;}
   .advisor .lb{font-family:var(--en); font-size:11.5px; font-weight:700; letter-spacing:.16em; color:var(--wine);}
@@ -489,57 +523,60 @@
 </header>
 
 <!-- ══════════ 01 문제 ══════════ -->
-<section class="sec tint up" id="story">
+<section class="sec tint up" id="who">
   <div class="wrap col">
-    <div class="no"><b>01 — STORY</b><span></span></div>
-    <h3>한 어머니에게<br /><em>두 아들이 있습니다.</em></h3>
+    <div class="no"><b>01 — WHO WE ARE</b><span></span></div>
+    <h3>회사 정의 — <em>수학교육기관.</em></h3>
+    <p class="sub">회사의 정의를 네 개의 축으로 나눠 두었습니다. 슬로건이 아니라,
+      <b>우리가 만든 것을 판정하는 기준</b>입니다.</p>
   </div>
-  <div class="wrap col">
-    <div class="duo">
-      <div class="duo-h">
-        <h4>누가 더 <em>수학을 잘하는</em> 학생일까요?</h4>
+  <div class="wrap">
+    <div class="axg">
+      <div class="ax">
+        <div class="axn">01</div>
+        <h4>내 곁의</h4>
+        <ul>
+          <li><b>물리적</b><span>학원에 가지 않아도, 대치동에 가지 않아도 내 방에서 어디서든</span></li>
+          <li><b>시간적</b><span>24시간 어디서나 눈치 볼 필요 없이 질문하고 학습할 수 있는</span></li>
+          <li><b>경제적</b><span>나를 기억하는 최고의 선생님을 인강보다, 그룹과외보다 저렴한 가격으로</span></li>
+        </ul>
       </div>
-      <div class="duo-g">
-        <figure class="son">
-          <div class="pics">
-            <img src="assets/story/junseo-boy.jpg" alt="밤늦게 연필을 쥐고 문제를 푸는 첫째 준서" loading="lazy" />
-            <img src="assets/story/junseo-book.jpg" alt="연필 풀이로 빼곡하고 빨간 세모가 그어진 준서의 문제집" loading="lazy" />
-          </div>
-          <figcaption><b>첫째, 준서</b><p>밤새 연필로 빼곡하게 풉니다.<br />문제집엔 <i>X와 세모</i>가 가득합니다.</p></figcaption>
-        </figure>
-        <div class="duo-vs"><span>VS</span></div>
-        <figure class="son">
-          <div class="pics">
-            <img src="assets/story/soomin-boy.jpg" alt="휴대폰 옆에서 빨간 펜으로 동그라미를 치며 웃는 둘째 수민" loading="lazy" />
-            <img src="assets/story/soomin-book.jpg" alt="전부 빨간 동그라미로 채워진 수민의 문제집과 휴대폰" loading="lazy" />
-          </div>
-          <figcaption><b>둘째, 수민</b><p>&ldquo;학원에서 답지 걷어가도 AI한테 물어보면 그만이야~&rdquo;<br />문제집은 전부 <i>동그라미</i>입니다.</p></figcaption>
-        </figure>
+      <div class="ax">
+        <div class="axn">02</div>
+        <h4>개인화된 · 나만의</h4>
+        <ul>
+          <li><b>나의 실력을 아는</b><span>질문하면 나의 이해의 걸음과 발맞추어</span></li>
+          <li><b>나의 습관을 아는</b><span>접근 방식과 오답 패턴을 기억하는 — 장점과 뿌리는 받쳐 주는 지지대,
+            오류와 '수학적 잡초'는 가지치기하는 <b>정원사</b></span></li>
+          <li><b>나의 진도를 아는</b><span>배우지 않은 개념으로 설명하지 않고, 나의 위치와 진도를 기록하는</span></li>
+        </ul>
       </div>
-      <p class="duo-a">채점만 보면 답은 분명합니다. 그러나 그 동그라미를 그린 것은 수민이가 아니라 <b>AI였습니다.</b>
-        준서의 세모 옆에는 지우고 다시 쓴 자국이 남았습니다. <b>끈기는 그 자국 위에 쌓입니다.</b>
-        그리고 시험장에는, 둘 다 혼자 앉습니다.</p>
+      <div class="ax">
+        <div class="axn">03</div>
+        <h4>최고 수준</h4>
+        <ul>
+          <li><b>손글씨 인식</b><span>수식·그래프·도형까지, 최상의 인식 기술</span></li>
+          <li><b>가장 효과적인 설명법과 커리큘럼</b><span>'효과적'이란 학생의 이해수준에 최적이라는 뜻</span></li>
+          <li><b>정확하고 깔끔한 해설</b><span>연령·문해력·끈기에 따라 한 번에 내놓는 해설의 부피와 밀도를 조절</span></li>
+        </ul>
+      </div>
+      <div class="ax">
+        <div class="axn">04</div>
+        <h4>진짜 교육</h4>
+        <ul>
+          <li><b>고기를 잡는 법을 가르치는</b><span>언제 개입할 것인가 — 그리고 끝내 직접 설명할 수 있게</span></li>
+          <li><b>배움의 기쁨을 알게 하는</b><span>학습이 성장으로 이어지는 보상체계, 눈에 보이는 위치와 성장곡선</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="sec up" id="problem">
+<section class="sec up" id="problem1">
   <div class="wrap col">
-    <div class="no"><b>02 — PROBLEM</b><span></span></div>
-    <h3>둘째 수민이는,<br /><em>지금 전국의 교실에 있습니다.</em></h3>
-    <p class="sub">이야기가 아닙니다. 답은 3초 만에 받지만 설명은 못 하는 아이들을, 교단이 먼저 알아보고 있었습니다.</p>
-
-    <div class="interview">
-      <div class="tx">
-        <div class="k">Interview</div>
-        <p class="q">AI 시대 이후, 학생들의 문제 풀이 습관에 어떤 변화를 느끼시나요?</p>
-        <p class="a">고민하는 시간이 줄었습니다.<br /><em>질문하러 오지 않습니다.</em></p>
-        <div class="who">경기도 사립고등학교 수학교사 정○○ · 2026년 7월 인터뷰 — 한 현직 교사의 관찰입니다.</div>
-      </div>
-      <div class="ph"><img src="assets/fig/fig-teacher.jpg" alt="어두운 교실에 앉아 있는 수학교사" loading="lazy" /></div>
-    </div>
-
-    <p class="sub" style="margin-top:44px;">학생들이 기대는 그 AI는, 정작 수학 앞에서 <b>세 곳에서 멈춥니다.</b></p>
+    <div class="no"><b>02 — WHY WE STARTED · 1</b><span></span></div>
+    <h3>문제 인식 ① —<br /><em>AI의 불편.</em></h3>
+    <p class="sub">왜 시작했는가, 첫째. 학생들이 기대는 그 AI는 정작 수학 앞에서 <b>세 곳에서 멈춥니다.</b></p>
     <div class="p3">
       <div class="pc">
         <div class="n5">01 손글씨</div>
@@ -596,12 +633,67 @@
   </div>
 </section>
 
-<section class="sec tint up" id="solution">
+<section class="sec tint up" id="problem2">
   <div class="wrap col">
-    <div class="no"><b>03 — SOLUTION</b><span></span></div>
-    <h3>그래서 Provee는, 멈추는<br /><em>세 곳을 다시 만들었습니다.</em></h3>
-    <p class="sub">손글씨 · 상호작용 · 지속성 — 순서대로 보여드립니다. 전부 실제 화면입니다.</p>
+    <div class="no"><b>03 — WHY WE STARTED · 2</b><span></span></div>
+    <h3>문제 인식 ② —<br /><em>생각의 양도.</em></h3>
+    <p class="sub">왜 시작했는가, 둘째. 생각하는 수고 — 바람직한 어려움 — 를 AI에게 양도한 시대적 문제입니다.
+      한 어머니에게 두 아들이 있습니다.</p>
+    <div class="duo">
+      <div class="duo-h">
+        <h4>누가 더 <em>수학을 잘하는</em> 학생일까요?</h4>
+      </div>
+      <div class="duo-g">
+        <figure class="son">
+          <div class="pics">
+            <img src="assets/story/junseo-boy.jpg" alt="밤늦게 연필을 쥐고 문제를 푸는 첫째 준서" loading="lazy" />
+            <img src="assets/story/junseo-book.jpg" alt="연필 풀이로 빼곡하고 빨간 세모가 그어진 준서의 문제집" loading="lazy" />
+          </div>
+          <figcaption><b>첫째, 준서</b><p>밤새 연필로 빼곡하게 풉니다.<br />문제집엔 <i>X와 세모</i>가 가득합니다.</p></figcaption>
+        </figure>
+        <div class="duo-vs"><span>VS</span></div>
+        <figure class="son">
+          <div class="pics">
+            <img src="assets/story/soomin-boy.jpg" alt="휴대폰 옆에서 빨간 펜으로 동그라미를 치며 웃는 둘째 수민" loading="lazy" />
+            <img src="assets/story/soomin-book.jpg" alt="전부 빨간 동그라미로 채워진 수민의 문제집과 휴대폰" loading="lazy" />
+          </div>
+          <figcaption><b>둘째, 수민</b><p>&ldquo;학원에서 답지 걷어가도 AI한테 물어보면 그만이야~&rdquo;<br />문제집은 전부 <i>동그라미</i>입니다.</p></figcaption>
+        </figure>
+      </div>
+      <p class="duo-a">채점만 보면 답은 분명합니다. 그러나 그 동그라미를 그린 것은 수민이가 아니라 <b>AI였습니다.</b>
+        준서의 세모 옆에는 지우고 다시 쓴 자국이 남았습니다. <b>끈기는 그 자국 위에 쌓입니다.</b>
+        그리고 시험장에는, 둘 다 혼자 앉습니다.</p>
+    </div>
 
+    <div class="defn">
+      <div class="dh"><b>정의</b><span>Desirable Difficulty</span></div>
+      <div class="db">
+        <p class="term">바람직한 어려움 — <em>당장은 더디지만, 오래 남는 지식을 만드는 어려움.</em></p>
+        <p class="desc">스스로 기억을 꺼내고, 풀고, 틀리고, 다시 시도하는 과정. 학습 속도를 떨어뜨리는 것처럼 보이지만
+          실제로는 파지(retention)와 전이(transfer)를 높인다는 것이 반복 확인된 결과입니다.
+          AI는 이 어려움을 '불필요한 불편'으로 분류하고 치워버렸습니다 — 끈기가 자라던 자리가 바로 그곳이었습니다.</p>
+        <cite>Robert A. Bjork &amp; Elizabeth L. Bjork · University of California, Los Angeles</cite>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top:34px;">교단은 이 변화를 먼저 알아보고 있었습니다.</p>
+    <div class="interview">
+      <div class="tx">
+        <div class="k">Interview</div>
+        <p class="q">AI 시대 이후, 학생들의 문제 풀이 습관에 어떤 변화를 느끼시나요?</p>
+        <p class="a">고민하는 시간이 줄었습니다.<br /><em>질문하러 오지 않습니다.</em></p>
+        <div class="who">경기도 사립고등학교 수학교사 정○○ · 2026년 7월 인터뷰 — 한 현직 교사의 관찰입니다.</div>
+      </div>
+      <div class="ph"><img src="assets/fig/fig-teacher.jpg" alt="어두운 교실에 앉아 있는 수학교사" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec up" id="solution">
+  <div class="wrap col">
+    <div class="no"><b>04 — OUR SOLUTION</b><span></span></div>
+    <h3>솔루션 —<br /><em>기술, 그리고 진짜 교육.</em></h3>
+    <p class="sub">멈추는 세 곳을 다시 만들었습니다. 손글씨 · 상호작용 · 지속성 — 순서대로, 전부 실제 화면입니다.</p>
     <div class="solhead" style="margin-top:40px;">
       <div class="sn">01 손글씨</div>
       <h4>학생이 그린 그래프와 도형을 <em>정확히 읽고 구현합니다.</em></h4>
@@ -625,123 +717,89 @@
       실제 화면 · 벡터수학엔진.</p>
 
     <div class="solhead">
-      <div class="sn">02 상호작용</div>
-      <h4>답을 주지 않고, <em>되묻습니다.</em></h4>
-      <p class="sd">막히면 학생이 누릅니다. 누르면 정답이 아니라, 다음 질문이 옵니다.</p>
-    </div>
-    <div class="g2">
-      <div>
-        <figure class="fx" data-full="assets/fig/fig-s-ask.jpg"><img src="assets/fig/fig-s-ask.jpg" alt="막힌 지점에서 보기를 주는 화면" loading="lazy" /></figure>
-        <p class="fxc">막힌 지점에서 보기를 준다 — <b>정답 대신, 질문이 옵니다</b></p>
-      </div>
-      <div>
-        <figure class="fx" data-full="assets/fig/fig-s-dialog.jpg"><img src="assets/fig/fig-s-dialog.jpg" alt="극점을 스스로 찾아가게 하는 대화" loading="lazy" /></figure>
-        <p class="fxc">해설 후에는 <b>스스로 설명하게 합니다</b> · 실제 화면</p>
-      </div>
+      <div class="sn">그리고, 진짜 교육</div>
+      <h4>설명할 수 있을 때까지, <em>차근차근.</em></h4>
+      <p class="sd">답을 주는 대신 되묻고, 학생이 자기 언어로 설명할 수 있을 때에만 다음으로 갑니다.
+        언제 개입하고 언제 침묵할 것인가 — 기능은 따라 만들 수 있지만 이 판단은 그렇지 않습니다.
+        이것이 우리의 교육이자, 해자의 맨 위층입니다.</p>
     </div>
 
     <div class="solhead">
-      <div class="sn">03 지속성</div>
-      <h4>어제의 너를 <em>기억합니다.</em></h4>
-      <p class="sd">매일의 풀이에서 습관과 오답 패턴을 기억하고, 필요한 순간에 먼저 꺼냅니다.</p>
+      <div class="sn">경쟁사 분석</div>
+      <h4>세 축 위의 <em>경쟁 지형.</em></h4>
+      <p class="sd">이 문제를 보고 있는 회사는 많고, 각자 한두 축은 잘합니다. 교육 AI가 "잘한다"고 말하는 것을
+        <b>단계적 상호작용 · 손풀이 인식 · 지속적 기억</b> 세 축으로 나누고, 그 위에 회사들을 놓았습니다.</p>
     </div>
-    <div class="g2">
-      <div>
-        <div class="tcards">
-          <div class="tcard1">
-            <div class="tk">선생님의 도움</div>
-            <p class="tq">수민! 그저께 풀었던 f(−x) = f(x), <b>우함수 기억 안 나?</b></p>
-            <p class="ts">이번 기회에 다시 잡고 가자. 오답노트에 넣어둘게.</p>
-            <div class="tm">3일 전 · 함수의 대칭 · 같은 실수 2회</div>
-          </div>
-          <div class="tcard1">
-            <div class="tk">선생님의 도움</div>
-            <p class="tq">요즘 부호 실수가 잦아. <b>이항할 때 부호부터 확인하자.</b></p>
-            <p class="ts">지난 다섯 문제 중 세 번이 같은 자리였어.</p>
-            <div class="tm"><span class="tag">습관 감지 — 부호</span> 최근 7일 · 오류 유형 분석</div>
-          </div>
-        </div>
-        <p class="fxc">그저께 풀었던 우함수, 반복되는 부호 실수 — <b>습관 감지</b></p>
+    <div class="venn" role="img" aria-label="단계적 상호작용, 손풀이 인식, 지속적 기억 세 축 위의 경쟁 지형">
+      <div class="axis a1">단계적 상호작용</div>
+      <div class="cir c1"></div><div class="cir c2"></div><div class="cir c3"></div>
+      <div class="axis a2">손풀이<br />인식</div>
+      <div class="axis a3">지속적<br />기억</div>
+      <span class="chip" style="left:50%; top:24.5%;">Khanmigo</span>
+      <span class="chip" style="left:50%; top:32%;">ChatGPT</span>
+      <span class="chip" style="left:36%; top:43.5%;">스터디에이</span>
+      <span class="chip" style="left:65.5%; top:40%;">Mathspace</span>
+      <span class="chip" style="left:67%; top:46.5%;">Synthesis</span>
+      <span class="chip" style="left:29.5%; top:55%;">콴다</span>
+      <span class="chip" style="left:29%; top:61.5%;">Photomath</span>
+      <span class="chip" style="left:28.5%; top:68%;">MyScript</span>
+      <span class="chip" style="left:29%; top:74.5%;">수학대왕</span>
+      <span class="chip" style="left:66.5%; top:57%;">ALEKS</span>
+      <span class="chip" style="left:67.5%; top:63.5%;">Squirrel</span>
+      <span class="chip" style="left:66.5%; top:70%;">뤼이드</span>
+      <div class="me"><div><b>Provee</b><span>3축 모두 ○</span></div></div>
+    </div>
+    <p class="fxc" style="margin-top:22px;">2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다. 세 축의 정의와 판정 기준은 자체 기준입니다.</p>
+
+    <div class="solhead">
+      <div class="sn">해자 — 세 층</div>
+      <h4>한국에서만 나오는 손글씨 데이터로<br /><em>파인튜닝된 모델과 진짜 교육.</em></h4>
+      <p class="sd">왜 따라잡기 어려운지를 세 층으로 나눠 적습니다. 아래층이 위층을 받칩니다.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="moat">
+      <div class="mo">
+        <div class="lv">Layer 1 — Data</div>
+        <h5>세계에서 가장 조밀한<br />손글씨 수학 스트림</h5>
+        <p>한국 고교생 자습 <b>125분/일</b>, 미국 <b>45분/일</b> — 2.8배. 핵심은 양이 아니라 형태입니다.
+          사진이 아니라 <b>획·지움·멈춤을 벡터로</b> 잡습니다. 최종 답은 이미 상품화됐지만,
+          학생이 밟은 경로는 아직 아무도 소유하지 않았습니다.</p>
+        <span class="st on">축적 중</span>
       </div>
-      <div>
-        <div class="netcard">
-          <div class="ct2">공부할수록 채워지는 개념지도</div>
-          <svg viewBox="0 0 400 322" role="img" aria-label="개념 사이의 선수학습 관계 지도">
-            <g stroke="#DCD2BE" stroke-width="1">
-              <line x1="150" y1="28" x2="238" y2="52" /><line x1="238" y1="52" x2="330" y2="62" />
-              <line x1="150" y1="28" x2="158" y2="92" /><line x1="158" y1="92" x2="216" y2="120" />
-              <line x1="238" y1="52" x2="216" y2="120" /><line x1="330" y1="62" x2="306" y2="110" />
-              <line x1="306" y1="110" x2="216" y2="120" /><line x1="306" y1="110" x2="296" y2="172" />
-              <line x1="216" y1="120" x2="216" y2="158" /><line x1="96" y1="148" x2="216" y2="158" />
-              <line x1="96" y1="148" x2="40" y2="182" /><line x1="216" y1="158" x2="296" y2="172" />
-              <line x1="216" y1="158" x2="232" y2="196" /><line x1="296" y1="172" x2="322" y2="214" />
-              <line x1="232" y1="196" x2="322" y2="214" /><line x1="40" y1="182" x2="108" y2="232" />
-              <line x1="108" y1="232" x2="82" y2="268" /><line x1="108" y1="232" x2="180" y2="268" />
-              <line x1="82" y1="268" x2="180" y2="268" /><line x1="180" y1="268" x2="268" y2="258" />
-              <line x1="322" y1="214" x2="268" y2="258" /><line x1="232" y1="196" x2="180" y2="268" />
-              <line x1="306" y1="110" x2="322" y2="214" /><line x1="44" y1="36" x2="150" y2="28" />
-            </g>
-            <g>
-              <circle cx="44" cy="36" r="4" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1" />
-              <circle cx="360" cy="28" r="4" fill="#DDD5C4" />
-              <circle cx="376" cy="142" r="5" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1" />
-              <circle cx="30" cy="300" r="4" fill="#DDD5C4" />
-              <circle cx="352" cy="298" r="4" fill="#7E1F2C" />
-              <circle cx="150" cy="28" r="9" fill="#7E1F2C" />
-              <circle cx="238" cy="52" r="10" fill="#7E1F2C" />
-              <circle cx="330" cy="62" r="9" fill="#E8C9C4" stroke="#8A1C2B" stroke-width="1.4" />
-              <circle cx="158" cy="92" r="9" fill="#7E1F2C" />
-              <circle cx="306" cy="110" r="12" fill="#7E1F2C" />
-              <circle cx="216" cy="120" r="11" fill="#7E1F2C" />
-              <circle cx="96" cy="148" r="8" fill="#F6E9E2" stroke="#E86030" stroke-width="2.4" />
-              <circle cx="216" cy="158" r="9" fill="#7E1F2C" />
-              <circle cx="296" cy="172" r="9" fill="#7E1F2C" />
-              <circle cx="40" cy="182" r="7" fill="#F6E9E2" stroke="#E86030" stroke-width="2.4" />
-              <circle cx="232" cy="196" r="8" fill="#7E1F2C" />
-              <circle cx="322" cy="214" r="10" fill="#7E1F2C" />
-              <circle cx="108" cy="232" r="9" fill="#7E1F2C" />
-              <circle cx="82" cy="268" r="10" fill="#7E1F2C" />
-              <circle cx="180" cy="268" r="9" fill="#7E1F2C" />
-              <circle cx="268" cy="258" r="8" fill="#DDD5C4" />
-            </g>
-            <g font-size="9" fill="#5C534B">
-              <text x="163" y="26">일차함수</text>
-              <text x="251" y="50">미분계수와 도함수</text>
-              <text x="342" y="60">함수의 극한</text>
-              <text x="171" y="90">도함수의 활용</text>
-              <text x="320" y="108">함수</text>
-              <text x="230" y="118">이차함수</text>
-              <text x="109" y="146" fill="#C4520A" font-weight="700">여러 가지 부등식</text>
-              <text x="229" y="156">이차방정식과 이차함수</text>
-              <text x="308" y="170">이차방정식</text>
-              <text x="52" y="180" fill="#C4520A" font-weight="700">일차부등식</text>
-              <text x="244" y="194">복소수</text>
-              <text x="335" y="212">제곱근</text>
-              <text x="120" y="230">일차방정식</text>
-              <text x="95" y="266">문자식</text>
-              <text x="192" y="266">다항식의 계산</text>
-              <text x="280" y="256">지수와 로그</text>
-            </g>
-          </svg>
-          <div class="netlegend">
-            <span><i style="background:#7E1F2C;"></i>익혔다</span>
-            <span><i style="background:#E8C9C4; box-shadow:inset 0 0 0 1.5px #8A1C2B;"></i>익히는 중</span>
-            <span><i style="background:#DDD5C4;"></i>아직</span>
-            <span><i style="background:#F6E9E2; box-shadow:inset 0 0 0 2px #E86030;"></i>다시 봐야 할 곳</span>
-          </div>
-        </div>
-        <p class="fxc">개념·연결·가중치는 실제 데이터, 숙련도 색은 예시</p>
+      <div class="mo">
+        <div class="lv">Layer 2 — Model</div>
+        <h5>API 래퍼가 아닌<br />수학 특화 스택</h5>
+        <p>축적한 데이터로 손글씨 추론에 파인튜닝해, 범용 API 호출자가 맞출 수 없는
+          <b>원가·정확도 구조</b>를 만들려 합니다.</p>
+        <span class="st">아직 학습 전</span>
+      </div>
+      <div class="mo">
+        <div class="lv">Layer 3 — Pedagogy</div>
+        <h5>언제 개입하고<br />언제 침묵할 것인가</h5>
+        <p>humanlike를 넘어 <b>teacher-like</b>. 답을 내주는 엔진은 그 판단을 관측한 적이 없습니다.
+          기능 목록으로 정의한 해자는 따라잡히지만, 개입 시점 판단은 따라잡기 어렵습니다.</p>
+        <span class="st on">설계·운영 중</span>
       </div>
     </div>
-    <p class="pnote">교육과정은 15과목 · 111개 대단원 · 481개 소단원까지 분해해 두었고, 개념지도가 그 위에서 움직입니다.</p>
+    <div class="col" style="margin:0 auto;">
+      <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 · U.S. BLS American Time Use Survey.
+        2.8배는 자습시간 비율에서 나온 값이며 손글씨 양을 직접 실측한 수치는 아닙니다.
+        그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
+    </div>
+    <div class="col" style="margin:0 auto;">
+      <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 · U.S. BLS American Time Use Survey.
+        2.8배는 자습시간 비율에서 나온 값이며 손글씨 양을 직접 실측한 수치는 아닙니다.
+        그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
+    </div>
   </div>
 </section>
 
 <section class="sec up" id="validation">
   <div class="wrap col">
-    <div class="no"><b>04 — VALIDATION</b><span></span></div>
-    <h3>만들기 전에 물었고,<br /><em>만든 뒤에 다시 물었습니다.</em></h3>
-    <p class="sub">사전 수요 설문 — 중·고등학생과 대학생 <b>105명</b>, 2026년 7월, 온라인.</p>
+    <div class="no"><b>05 — VALIDATION</b><span></span></div>
+    <h3>검증 <em>결과.</em></h3>
+    <p class="sub">만들기 전에 물었고, 만든 뒤에 다시 물었습니다. 사전 수요 설문 — 중·고등학생과 대학생 <b>105명</b>, 2026년 7월, 온라인.</p>
     <div class="vgrid">
       <div class="vstat"><div class="v">84%</div><p>중·고등학생 "쓰겠다"</p></div>
       <div class="vstat"><div class="v">93%</div><p>AI로 공부해 본 대학생 "쓰겠다"</p></div>
@@ -774,143 +832,12 @@
   </div>
 </section>
 
-<section class="sec tint up" id="edge">
-  <div class="wrap col">
-    <div class="no"><b>05 — COMPETITIVE LANDSCAPE</b><span></span></div>
-    <h3>세 축을 하나의 학습 흐름으로<br /><em>잇는 자리를 증명하려 합니다.</em></h3>
-    <p class="sub">이 문제를 보고 있는 회사는 많고, 각자 한두 축은 잘합니다. 교육 AI가 "잘한다"고 말하는 것을
-      <b>단계적 상호작용 · 손풀이 인식 · 지속적 기억</b> 세 축으로 나누고, 그 위에 회사들을 놓았습니다.</p>
-    <div class="venn" role="img" aria-label="단계적 상호작용, 손풀이 인식, 지속적 기억 세 축 위의 경쟁 지형">
-      <div class="axis a1">단계적 상호작용</div>
-      <div class="cir c1"></div><div class="cir c2"></div><div class="cir c3"></div>
-      <div class="axis a2">손풀이<br />인식</div>
-      <div class="axis a3">지속적<br />기억</div>
-      <span class="chip" style="left:50%; top:24.5%;">Khanmigo</span>
-      <span class="chip" style="left:50%; top:32%;">ChatGPT</span>
-      <span class="chip" style="left:36%; top:43.5%;">스터디에이</span>
-      <span class="chip" style="left:65.5%; top:40%;">Mathspace</span>
-      <span class="chip" style="left:67%; top:46.5%;">Synthesis</span>
-      <span class="chip" style="left:29.5%; top:55%;">콴다</span>
-      <span class="chip" style="left:29%; top:61.5%;">Photomath</span>
-      <span class="chip" style="left:28.5%; top:68%;">MyScript</span>
-      <span class="chip" style="left:29%; top:74.5%;">수학대왕</span>
-      <span class="chip" style="left:66.5%; top:57%;">ALEKS</span>
-      <span class="chip" style="left:67.5%; top:63.5%;">Squirrel</span>
-      <span class="chip" style="left:66.5%; top:70%;">뤼이드</span>
-      <div class="me"><div><b>Provee</b><span>3축 모두 ○</span></div></div>
-    </div>
-    <p class="fxc" style="margin-top:22px;">2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다. 세 축의 정의와 판정 기준은 자체 기준입니다.</p>
-  </div>
-
-  <div class="wrap col" style="margin-top:56px;">
-    <h3>한국에서만 나오는 손글씨 데이터로<br /><em>파인튜닝된 모델과 진짜 교육.</em></h3>
-    <p class="sub">왜 따라잡기 어려운지를 세 층으로 나눠 적습니다. 아래층이 위층을 받칩니다.</p>
-  </div>
-  <div class="wrap">
-    <div class="moat">
-      <div class="mo">
-        <div class="lv">Layer 1 — Data</div>
-        <h5>세계에서 가장 조밀한<br />손글씨 수학 스트림</h5>
-        <p>한국 고교생 자습 <b>125분/일</b>, 미국 <b>45분/일</b> — 2.8배. 핵심은 양이 아니라 형태입니다.
-          사진이 아니라 <b>획·지움·멈춤을 벡터로</b> 잡습니다. 최종 답은 이미 상품화됐지만,
-          학생이 밟은 경로는 아직 아무도 소유하지 않았습니다.</p>
-        <span class="st on">축적 중</span>
-      </div>
-      <div class="mo">
-        <div class="lv">Layer 2 — Model</div>
-        <h5>API 래퍼가 아닌<br />수학 특화 스택</h5>
-        <p>축적한 데이터로 손글씨 추론에 파인튜닝해, 범용 API 호출자가 맞출 수 없는
-          <b>원가·정확도 구조</b>를 만들려 합니다.</p>
-        <span class="st">아직 학습 전</span>
-      </div>
-      <div class="mo">
-        <div class="lv">Layer 3 — Pedagogy</div>
-        <h5>언제 개입하고<br />언제 침묵할 것인가</h5>
-        <p>humanlike를 넘어 <b>teacher-like</b>. 답을 내주는 엔진은 그 판단을 관측한 적이 없습니다.
-          기능 목록으로 정의한 해자는 따라잡히지만, 개입 시점 판단은 따라잡기 어렵습니다.</p>
-        <span class="st on">설계·운영 중</span>
-      </div>
-    </div>
-    <div class="col" style="margin:0 auto;">
-      <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 · U.S. BLS American Time Use Survey.
-        2.8배는 자습시간 비율에서 나온 값이며 손글씨 양을 직접 실측한 수치는 아닙니다.
-        그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
-    </div>
-  </div>
-</section>
-
-<section class="sec up" id="market">
-  <div class="wrap col">
-    <div class="no"><b>06 — MARKET</b><span></span></div>
-    <h3>남은 자도, 떠난 자도 —<br /><em>모두 잠재 수요로 봅니다.</em></h3>
-    <p class="sub">경쟁이 몰린다는 건 판이 크다는 뜻입니다. 2025년, 수학 사교육 참여율은 꺾였는데
-      남은 학생의 1인 지출은 계속 올랐습니다. <b>시장은 줄어든 게 아니라 둘로 갈라졌습니다.</b></p>
-
-    <div class="g2" style="align-items:center;">
-      <div>
-        <div class="chartcard">
-          <div class="ct2">고교 수학 시장 Breakdown</div>
-          <div class="cs2">지수 · 2016 = 100 · 출처: 「2025년 초중고사교육비조사」</div>
-          <svg viewBox="0 0 560 292" role="img" aria-label="수학 사교육 참여율과 1인 지출 추이">
-            <g stroke="#EFE7D8" stroke-width="1">
-              <line x1="42" y1="210" x2="520" y2="210" /><line x1="42" y1="167" x2="520" y2="167" />
-              <line x1="42" y1="124" x2="520" y2="124" /><line x1="42" y1="81" x2="520" y2="81" />
-              <line x1="42" y1="38" x2="520" y2="38" />
-            </g>
-            <path d="M455 92 L505 92 L505 139 Z" fill="rgba(178,74,56,.14)" />
-            <path d="M60 210 L159 184 L258 158 L356 124 L455 86 L505 58" fill="none" stroke="#8A7E6A" stroke-width="2.4" stroke-linecap="round" />
-            <path d="M60 210 L109 193 L159 180 L208 189 L258 172 L307 150 L356 129 L406 108 L455 92 L505 139"
-              fill="none" stroke="#C24A32" stroke-width="2.8" stroke-linecap="round" />
-            <line x1="455" y1="92" x2="505" y2="139" stroke="#C24A32" stroke-width="1.4" stroke-dasharray="4 4" />
-            <circle cx="455" cy="92" r="4.5" fill="#FAF6EC" stroke="#C24A32" stroke-width="2" />
-            <circle cx="505" cy="139" r="4" fill="#C24A32" />
-            <circle cx="505" cy="58" r="4" fill="#8A7E6A" />
-            <text x="514" y="62" font-size="12.5" font-weight="700" fill="#5C534B">135.7</text>
-            <text x="514" y="143" font-size="12.5" font-weight="700" fill="#C24A32">116.9</text>
-            <text x="400" y="185" font-size="17" font-weight="800" fill="#C24A32">−6.3만 명</text>
-            <text x="408" y="202" font-size="10.5" fill="#8A7E6A">2025년 이탈 수요</text>
-            <g font-size="11" fill="#8A7E6A" text-anchor="middle">
-              <text x="60" y="232">2016</text><text x="208" y="232">2019</text>
-              <text x="356" y="232">2022</text><text x="505" y="232">2025</text>
-            </g>
-          </svg>
-          <div class="legend">
-            <span><i style="background:#C24A32;"></i>수학 사교육 참여율</span>
-            <span><i style="background:#8A7E6A;"></i>참여학생 1인 지출액</span>
-          </div>
-        </div>
-        <p class="fxc">참여율은 −6.3만 명(2025년 이탈), 1인 지출은 계속 상승</p>
-      </div>
-      <div class="tsom">
-        <div class="row"><span class="lv">TAM</span><span class="nm">고교 사교육</span><span class="vv">7.8조 원</span></div>
-        <div class="row"><span class="lv">SAM</span><span class="nm">고교 수학</span><span class="vv">2.6조 원</span></div>
-        <div class="row som"><span class="lv">SOM</span><span class="nm">3년 차 목표 연매출</span><span class="vv">51억 원</span></div>
-        <div class="formula">
-          <b>54.8만</b><span>25년 참여자</span>
-          <span class="eq">+</span>
-          <b>6.3만</b><span>25년 이탈 수요</span>
-          <span class="eq">=</span>
-          <b>61.1만 명</b><span>Provee 실수요</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="edq">
-      <p>사교육비 총액 감소는 긍정적 신호가 아니다. 가계 부담으로 일부 가정은 사교육을 포기했고,
-        고소득층은 지출을 늘렸다. <em>교육 격차가 고착되고 있다.</em></p>
-      <cite>한국경제 사설 「사교육비 감소가 아니라 양극화… 더 벌어진 교육 격차」 · 2026. 3. 12.</cite>
-    </div>
-    <p class="pnote">출처: 국가데이터처·교육부 「2025년 초중고사교육비조사」. 참여자 수·감소분은 고교 학생 수와 수학 참여율을 이용한 자체 추정.
-      2025년 800만 원 이상 가구의 참여 학생만 늘었습니다(+6,815명) — 가계 부담으로 떠난 수요를 가격으로 다시 부릅니다.</p>
-  </div>
-</section>
-
 <section class="sec tint up" id="model">
   <div class="wrap col">
-    <div class="no"><b>07 — BUSINESS MODEL</b><span></span></div>
-    <h3>과외급 개인화를,<br /><em>인강 아래 가격으로.</em></h3>
-    <p class="sub">갈라진 시장의 빈 자리 — 과외의 개인화와 인강 이하 가격 사이 — 에 우리가 고른 값입니다.</p>
-
+    <div class="no"><b>06 — HOW WE MAKE MONEY</b><span></span></div>
+    <h3>비즈니스 <em>모델.</em></h3>
+    <p class="sub">강점은 하나 — <b>개인화된 교육의 합리적인 가격.</b>
+      과외급 개인화를 인강 아래 가격에, 그 값을 누구에게 어떻게 받는지입니다.</p>
     <div class="darkchart">
           <div class="ct2">가격 포지셔닝</div>
           <div class="cs2">개인화 수준 × 월 지불액 (만원 · 고교 일반교과 참여학생 기준 · 앱은 정가)</div>
@@ -973,7 +900,91 @@
       <div class="prow"><div class="t">대학생 · 24시간의 전사</div><div class="v">9,900원</div></div>
     </div>
     <p class="pnote">패스는 짧을수록 하루당 단가가 높습니다 — 급할수록 비싸고, 길게 살수록 이득인 구조입니다.</p>
+  </div>
 
+  <div class="wrap col" style="margin-top:56px;">
+    <div class="solhead" style="margin-top:0;">
+      <div class="sn">Who Pays</div>
+      <h4>셋에게 <em>팝니다.</em></h4>
+    </div>
+    <div class="cust">
+      <div class="cu">
+        <div class="ck">B2C · 1</div>
+        <h5>한국 고등학생</h5>
+        <p>파인튜닝을 위한 <b>clean한 데이터의 원천</b>이자, 전 세계에서 독보적인 수학 사교육 과열 시장 — 대한민국.</p>
+      </div>
+      <div class="cu">
+        <div class="ck">B2C · 2</div>
+        <h5>전세계 수학 학습자</h5>
+        <p><b>메인 타깃층.</b> 같은 개인화 엔진으로 SAT·AP까지 확장합니다.</p>
+      </div>
+      <div class="cu">
+        <div class="ck">B2G</div>
+        <h5>미군</h5>
+        <p>대학 진학을 위해 입대한 이들의 <b>수학 학습 적응 지원.</b> 검증 전 단계 — 사용자 인터뷰부터 시작합니다.</p>
+      </div>
+    </div>
+
+    <p class="sub" style="margin-top:44px;">첫 번째 시장, 대한민국의 판 크기입니다.</p>
+    <div class="g2" style="align-items:center;">
+      <div>
+        <div class="chartcard">
+          <div class="ct2">고교 수학 시장 Breakdown</div>
+          <div class="cs2">지수 · 2016 = 100 · 출처: 「2025년 초중고사교육비조사」</div>
+          <svg viewBox="0 0 560 292" role="img" aria-label="수학 사교육 참여율과 1인 지출 추이">
+            <g stroke="#EFE7D8" stroke-width="1">
+              <line x1="42" y1="210" x2="520" y2="210" /><line x1="42" y1="167" x2="520" y2="167" />
+              <line x1="42" y1="124" x2="520" y2="124" /><line x1="42" y1="81" x2="520" y2="81" />
+              <line x1="42" y1="38" x2="520" y2="38" />
+            </g>
+            <path d="M455 92 L505 92 L505 139 Z" fill="rgba(178,74,56,.14)" />
+            <path d="M60 210 L159 184 L258 158 L356 124 L455 86 L505 58" fill="none" stroke="#8A7E6A" stroke-width="2.4" stroke-linecap="round" />
+            <path d="M60 210 L109 193 L159 180 L208 189 L258 172 L307 150 L356 129 L406 108 L455 92 L505 139"
+              fill="none" stroke="#C24A32" stroke-width="2.8" stroke-linecap="round" />
+            <line x1="455" y1="92" x2="505" y2="139" stroke="#C24A32" stroke-width="1.4" stroke-dasharray="4 4" />
+            <circle cx="455" cy="92" r="4.5" fill="#FAF6EC" stroke="#C24A32" stroke-width="2" />
+            <circle cx="505" cy="139" r="4" fill="#C24A32" />
+            <circle cx="505" cy="58" r="4" fill="#8A7E6A" />
+            <text x="514" y="62" font-size="12.5" font-weight="700" fill="#5C534B">135.7</text>
+            <text x="514" y="143" font-size="12.5" font-weight="700" fill="#C24A32">116.9</text>
+            <text x="400" y="185" font-size="17" font-weight="800" fill="#C24A32">−6.3만 명</text>
+            <text x="408" y="202" font-size="10.5" fill="#8A7E6A">2025년 이탈 수요</text>
+            <g font-size="11" fill="#8A7E6A" text-anchor="middle">
+              <text x="60" y="232">2016</text><text x="208" y="232">2019</text>
+              <text x="356" y="232">2022</text><text x="505" y="232">2025</text>
+            </g>
+          </svg>
+          <div class="legend">
+            <span><i style="background:#C24A32;"></i>수학 사교육 참여율</span>
+            <span><i style="background:#8A7E6A;"></i>참여학생 1인 지출액</span>
+          </div>
+        </div>
+        <p class="fxc">참여율은 −6.3만 명(2025년 이탈), 1인 지출은 계속 상승</p>
+      </div>
+      <div class="tsom">
+        <div class="row"><span class="lv">TAM</span><span class="nm">고교 사교육</span><span class="vv">7.8조 원</span></div>
+        <div class="row"><span class="lv">SAM</span><span class="nm">고교 수학</span><span class="vv">2.6조 원</span></div>
+        <div class="row som"><span class="lv">SOM</span><span class="nm">3년 차 목표 연매출</span><span class="vv">51억 원</span></div>
+        <div class="formula">
+          <b>54.8만</b><span>25년 참여자</span>
+          <span class="eq">+</span>
+          <b>6.3만</b><span>25년 이탈 수요</span>
+          <span class="eq">=</span>
+          <b>61.1만 명</b><span>Provee 실수요</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="edq">
+      <p>사교육비 총액 감소는 긍정적 신호가 아니다. 가계 부담으로 일부 가정은 사교육을 포기했고,
+        고소득층은 지출을 늘렸다. <em>교육 격차가 고착되고 있다.</em></p>
+      <cite>한국경제 사설 「사교육비 감소가 아니라 양극화… 더 벌어진 교육 격차」 · 2026. 3. 12.</cite>
+    </div>
+    <p class="pnote">출처: 국가데이터처·교육부 「2025년 초중고사교육비조사」. 참여자 수·감소분은 고교 학생 수와 수학 참여율을 이용한 자체 추정.
+      2025년 800만 원 이상 가구의 참여 학생만 늘었습니다(+6,815명) — 가계 부담으로 떠난 수요를 가격으로 다시 부릅니다.</p>
+  </div>
+
+  <div class="wrap col" style="margin-top:44px;">
     <div class="flow">
       <div class="fbox">
         <div class="fk">Sourcing</div>
@@ -1010,12 +1021,12 @@
   </div>
 </section>
 
-<section class="sec up" id="vision">
+<section class="sec up" id="milestone">
   <div class="wrap col">
-    <div class="no"><b>08 — VISION &amp; MILESTONE</b><span></span></div>
-    <h3>하나의 엔진으로,<br /><em>시장의 천장을 세 번 깹니다.</em></h3>
-    <p class="sub">고등학생 정기 구독 → 대학생 패스 → 해외 수학 시장 진출.</p>
-
+    <div class="no"><b>07 — MILESTONE</b><span></span></div>
+    <h3>비전과 <em>마일스톤.</em></h3>
+    <p class="sub">하나의 엔진으로 시장의 천장을 세 번 깹니다 — 고등학생 정기 구독 → 대학생 패스 → 해외 수학 시장.
+      그리고 올해의 걸음입니다.</p>
     <div class="phase">
       <div class="ph1">
         <div class="pk2">Phase 1 · Now</div>
@@ -1072,8 +1083,8 @@
 <section class="sec tint up" id="team">
   <div class="wrap">
     <div class="col" style="margin:0 auto;">
-      <div class="no"><b>09 — OUR TEAM</b><span></span></div>
-      <h3>각자의 자리에서<br /><em>이 문제를 붙들고 있습니다.</em></h3>
+      <div class="no"><b>08 — OUR TEAM</b><span></span></div>
+      <h3>팀 <em>소개.</em></h3>
       <p class="sub">LLM 수학 추론을 연구하는 NeurIPS 2025 공동 제1저자가 기술 자문으로 함께합니다.</p>
     </div>
 
@@ -1193,13 +1204,11 @@
 
 <section class="close up">
   <div class="wrap col">
-    <div class="k">What we ask</div>
-    <h3>아직 라운드를 열지 않았습니다.<br /><em>틀린 자리를 짚어 주십시오.</em></h3>
-    <p>법인이 서면 그때 정식으로 말씀드리겠습니다. 지금 부탁드리는 것은 이 문서에서 과장된 곳,
-      근거가 얇은 곳, 저희가 스스로 못 보고 있는 곳을 짚어 주시는 것입니다.
-      제품은 열어 두었으니 직접 써 보셔도 좋습니다.</p>
+    <div class="k">Contact</div>
+    <h3>Provee<em>.</em></h3>
+    <p>법인 설립 준비 중, 라운드 오픈 전입니다. 자료에 대한 피드백과 만남을 환영합니다.</p>
     <div class="acts">
-      <a class="btn g" href="mailto:soomin.kim@urpedu.com?subject=Provee">이야기 나누기</a>
+      <a class="btn g" href="mailto:soomin.kim@urpedu.com?subject=Provee">이메일 보내기</a>
       <a class="btn g" href="https://provee-mvp.vercel.app/#student" target="_blank" rel="noopener">제품 열어 보기</a>
     </div>
   </div>
