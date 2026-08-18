@@ -404,6 +404,12 @@
   .defn cite{display:block; margin-top:14px; padding-top:12px; border-top:1px solid var(--line2);
     font-style:normal; font-size:12px; color:var(--muted);}
 
+  .vstat .v,.tsom .vv,.prow .v,.formula b,.posbig .a1,.posbig .a3,.ph1 .big5{font-variant-numeric:tabular-nums;}
+  .mem,.cu,.mo,.ax,.vstat,.tcard1{transition:transform .35s var(--e), box-shadow .35s var(--e);}
+  .mem:hover,.cu:hover,.mo:hover,.ax:hover,.vstat:hover,.tcard1:hover{transform:translateY(-3px); box-shadow:var(--deep);}
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--wine); outline-offset:3px; border-radius:8px;}
+  .btn.g:hover{background:var(--wine-tint);}
+
   /* 해자 3층 */
   .moat{margin-top:34px; display:grid; gap:14px;}
   @media(min-width:900px){ .moat{grid-template-columns:repeat(3,1fr);} }
@@ -465,7 +471,7 @@
   .advisor{margin-top:13px; padding:26px 26px 24px; border-radius:20px; background:var(--card2);
     box-shadow:inset 0 0 0 1px var(--line); border-left:3px solid var(--wine);}
   .advisor .hd{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
-  .advisor .av{width:60px; height:60px; border-radius:14px; overflow:hidden; flex:0 0 auto;
+  .advisor .av{width:92px; height:92px; border-radius:16px; overflow:hidden; flex:0 0 auto;
     box-shadow:inset 0 0 0 1.5px var(--wine); background:var(--paper2);}
   .advisor .av img{width:100%; height:100%; object-fit:cover; display:block;}
   .advisor .lb{font-family:var(--en); font-size:11.5px; font-weight:700; letter-spacing:.16em; color:var(--wine);}
@@ -525,8 +531,8 @@
 <!-- ══════════ 01 문제 ══════════ -->
 <section class="sec tint up" id="who">
   <div class="wrap col">
-    <div class="no"><b>01 — WHO WE ARE</b><span></span></div>
-    <h3>회사 정의 — <em>수학교육기관.</em></h3>
+    <div class="no"><b>01 · 회사 정의</b><span></span></div>
+    <h3>사람의 한계를 AI로 극복하는<br /><em>수학교육기관.</em></h3>
     <p class="sub">회사의 정의를 네 개의 축으로 나눠 두었습니다. 슬로건이 아니라,
       <b>우리가 만든 것을 판정하는 기준</b>입니다.</p>
   </div>
@@ -546,7 +552,7 @@
         <h4>개인화된 · 나만의</h4>
         <ul>
           <li><b>나의 실력을 아는</b><span>질문하면 나의 이해의 걸음과 발맞추어</span></li>
-          <li><b>나의 습관을 아는</b><span>접근 방식과 오답 패턴을 기억하는 — 장점과 뿌리는 받쳐 주는 지지대,
+          <li><b>나의 습관을 아는</b><span>접근 방식과 오답 패턴을 기억하는. 장점과 뿌리는 받쳐 주는 지지대이자,
             오류와 '수학적 잡초'는 가지치기하는 <b>정원사</b></span></li>
           <li><b>나의 진도를 아는</b><span>배우지 않은 개념으로 설명하지 않고, 나의 위치와 진도를 기록하는</span></li>
         </ul>
@@ -564,7 +570,7 @@
         <div class="axn">04</div>
         <h4>진짜 교육</h4>
         <ul>
-          <li><b>고기를 잡는 법을 가르치는</b><span>언제 개입할 것인가 — 그리고 끝내 직접 설명할 수 있게</span></li>
+          <li><b>고기를 잡는 법을 가르치는</b><span>언제 개입할 것인가, 그리고 끝내 직접 설명할 수 있게</span></li>
           <li><b>배움의 기쁨을 알게 하는</b><span>학습이 성장으로 이어지는 보상체계, 눈에 보이는 위치와 성장곡선</span></li>
         </ul>
       </div>
@@ -574,8 +580,8 @@
 
 <section class="sec up" id="problem1">
   <div class="wrap col">
-    <div class="no"><b>02 — WHY WE STARTED · 1</b><span></span></div>
-    <h3>문제 인식 ① —<br /><em>AI의 불편.</em></h3>
+    <div class="no"><b>02 · 문제 인식 ①</b><span></span></div>
+    <h3>수학 앞에서 세 번 멈추는<br /><em>지금의 AI.</em></h3>
     <p class="sub">왜 시작했는가, 첫째. 학생들이 기대는 그 AI는 정작 수학 앞에서 <b>세 곳에서 멈춥니다.</b></p>
     <div class="p3">
       <div class="pc">
@@ -635,43 +641,41 @@
 
 <section class="sec tint up" id="problem2">
   <div class="wrap col">
-    <div class="no"><b>03 — WHY WE STARTED · 2</b><span></span></div>
-    <h3>문제 인식 ② —<br /><em>생각의 양도.</em></h3>
-    <p class="sub">왜 시작했는가, 둘째. 생각하는 수고 — 바람직한 어려움 — 를 AI에게 양도한 시대적 문제입니다.
-      한 어머니에게 두 아들이 있습니다.</p>
-    <div class="duo">
-      <div class="duo-h">
-        <h4>누가 더 <em>수학을 잘하는</em> 학생일까요?</h4>
-      </div>
-      <div class="duo-g">
-        <figure class="son">
-          <div class="pics">
-            <img src="assets/story/junseo-boy.jpg" alt="밤늦게 연필을 쥐고 문제를 푸는 첫째 준서" loading="lazy" />
-            <img src="assets/story/junseo-book.jpg" alt="연필 풀이로 빼곡하고 빨간 세모가 그어진 준서의 문제집" loading="lazy" />
-          </div>
-          <figcaption><b>첫째, 준서</b><p>밤새 연필로 빼곡하게 풉니다.<br />문제집엔 <i>X와 세모</i>가 가득합니다.</p></figcaption>
-        </figure>
-        <div class="duo-vs"><span>VS</span></div>
-        <figure class="son">
-          <div class="pics">
-            <img src="assets/story/soomin-boy.jpg" alt="휴대폰 옆에서 빨간 펜으로 동그라미를 치며 웃는 둘째 수민" loading="lazy" />
-            <img src="assets/story/soomin-book.jpg" alt="전부 빨간 동그라미로 채워진 수민의 문제집과 휴대폰" loading="lazy" />
-          </div>
-          <figcaption><b>둘째, 수민</b><p>&ldquo;학원에서 답지 걷어가도 AI한테 물어보면 그만이야~&rdquo;<br />문제집은 전부 <i>동그라미</i>입니다.</p></figcaption>
-        </figure>
-      </div>
-      <p class="duo-a">채점만 보면 답은 분명합니다. 그러나 그 동그라미를 그린 것은 수민이가 아니라 <b>AI였습니다.</b>
-        준서의 세모 옆에는 지우고 다시 쓴 자국이 남았습니다. <b>끈기는 그 자국 위에 쌓입니다.</b>
-        그리고 시험장에는, 둘 다 혼자 앉습니다.</p>
+    <div class="no"><b>03 · 문제 인식 ②</b><span></span></div>
+    <h3>AI에게 양도된<br /><em>생각하는 수고.</em></h3>
+    <p class="sub">지금 전화번호를 몇 개나 외우고 계십니까? 20년 전에는 서른 개를 외웠습니다.
+      기억력이 나빠진 게 아니라, <b>선택 사항이 된 것</b>입니다. 선택 사항이 된 것은 결국 사라집니다.
+      지금 같은 일이 다시 일어나고 있습니다. 이번에는 전화번호가 아니라, <b>생각</b>입니다.</p>
+
+    <div class="vgrid" style="grid-template-columns:repeat(2,1fr);">
+      <div class="vstat"><div class="v">96점</div><p>브라운대 경제학 수업, 집에서 AI와 함께 본 시험의 평균</p></div>
+      <div class="vstat"><div class="v">48점</div><p>같은 학생들이 강의실에서 종이로 본 시험의 평균</p></div>
     </div>
+
+    <div class="pair two" style="margin-top:26px;">
+      <div class="card">
+        <span class="lb">지금의 AI</span>
+        <h4>무게를 대신 들어주는 트레이너.</h4>
+        <p>벤치에 눕자마자 트레이너가 바벨을 대신 듭니다. 전부, 완벽한 자세로.
+          한 시간 뒤 땀 한 방울 없이 나오면서, 그것을 <b>도움</b>이라고 부릅니다.</p>
+      </div>
+      <div class="card sol">
+        <span class="lb">좋은 트레이너</span>
+        <h4>거의 들 수 있는 무게를 고릅니다.</h4>
+        <p>마지막 한 개에서 버티게 두고, <b>떨어뜨리기 직전에만 바를 받칩니다.</b>
+          성장은 거기서 일어납니다. 생각이 강해지는 자리도 거기입니다.</p>
+      </div>
+    </div>
+    <p class="sub" style="margin-top:26px;">학생들은 진짜 운동인 <b>생각 그 자체</b>를 AI에게 넘기고,
+      직접 들어올린 것처럼 96점을 들고 걸어 나갑니다. 도움이 사라지는 순간, 점수는 48점으로 무너집니다.</p>
 
     <div class="defn">
       <div class="dh"><b>정의</b><span>Desirable Difficulty</span></div>
       <div class="db">
-        <p class="term">바람직한 어려움 — <em>당장은 더디지만, 오래 남는 지식을 만드는 어려움.</em></p>
+        <p class="term">바람직한 어려움. <em>당장은 더디지만, 오래 남는 지식을 만드는 어려움.</em></p>
         <p class="desc">스스로 기억을 꺼내고, 풀고, 틀리고, 다시 시도하는 과정. 학습 속도를 떨어뜨리는 것처럼 보이지만
           실제로는 파지(retention)와 전이(transfer)를 높인다는 것이 반복 확인된 결과입니다.
-          AI는 이 어려움을 '불필요한 불편'으로 분류하고 치워버렸습니다 — 끈기가 자라던 자리가 바로 그곳이었습니다.</p>
+          AI는 이 어려움을 '불필요한 불편'으로 분류하고 치워버렸습니다. 끈기가 자라던 자리가 바로 그곳이었습니다.</p>
         <cite>Robert A. Bjork &amp; Elizabeth L. Bjork · University of California, Los Angeles</cite>
       </div>
     </div>
@@ -682,7 +686,7 @@
         <div class="k">Interview</div>
         <p class="q">AI 시대 이후, 학생들의 문제 풀이 습관에 어떤 변화를 느끼시나요?</p>
         <p class="a">고민하는 시간이 줄었습니다.<br /><em>질문하러 오지 않습니다.</em></p>
-        <div class="who">경기도 사립고등학교 수학교사 정○○ · 2026년 7월 인터뷰 — 한 현직 교사의 관찰입니다.</div>
+        <div class="who">경기도 사립고등학교 수학교사 정○○ · 2026년 7월 인터뷰 · 한 현직 교사의 관찰입니다.</div>
       </div>
       <div class="ph"><img src="assets/fig/fig-teacher.jpg" alt="어두운 교실에 앉아 있는 수학교사" loading="lazy" /></div>
     </div>
@@ -691,13 +695,15 @@
 
 <section class="sec up" id="solution">
   <div class="wrap col">
-    <div class="no"><b>04 — OUR SOLUTION</b><span></span></div>
-    <h3>솔루션 —<br /><em>기술, 그리고 진짜 교육.</em></h3>
-    <p class="sub">멈추는 세 곳을 다시 만들었습니다. 손글씨 · 상호작용 · 지속성 — 순서대로, 전부 실제 화면입니다.</p>
+    <div class="no"><b>04 · 솔루션</b><span></span></div>
+    <h3>과정을 읽는 기술,<br /><em>설명하게 하는 교육.</em></h3>
+    <p class="sub">군 복무를 마치고 돌아왔을 때, 창립자 자신이 그 48점의 학생이었습니다.
+      매번 사진을 찍어 올려야 했고, 수식은 오독되고, 그래프와 도형은 아예 읽지 못했습니다.
+      그래서 Provee를 직접 만들기 시작했습니다. <b>멈추는 세 곳을 다시 만들었습니다.</b> 전부 실제 화면입니다.</p>
     <div class="solhead" style="margin-top:40px;">
       <div class="sn">01 손글씨</div>
       <h4>학생이 그린 그래프와 도형을 <em>정확히 읽고 구현합니다.</em></h4>
-      <p class="sd">문제와 노트가 한 화면에 — 사진 찍어 올리고 기다릴 필요가 없습니다.</p>
+      <p class="sd">문제와 노트가 한 화면에. 사진 찍어 올리고 기다릴 필요가 없습니다.</p>
     </div>
     <div class="s3">
       <div>
@@ -710,25 +716,27 @@
       </div>
       <div>
         <figure class="fx" data-full="assets/fig/fig-s-redrawn.jpg"><img src="assets/fig/fig-s-redrawn.jpg" alt="앱이 읽고 다시 그린 그래프" loading="lazy" /></figure>
-        <p class="fxc"><b style="color:var(--wine-deep);">앱이 읽고 다시 그린 그래프</b> — 네가 센 근 3개, 실제 근 2개</p>
+        <p class="fxc"><b style="color:var(--wine-deep);">앱이 읽고 다시 그린 그래프</b> · 네가 센 근 3개, 실제 근 2개</p>
       </div>
     </div>
-    <p class="pnote">쌍곡선·포물선·공간도형도 같은 엔진이 그립니다. 초점·교점·절편은 전부 함수식에서 자동 계산 — 좌표를 적어주지 않습니다.
+    <p class="pnote">쌍곡선·포물선·공간도형도 같은 엔진이 그립니다. 초점·교점·절편은 전부 함수식에서 자동 계산. 좌표를 적어주지 않습니다.
       실제 화면 · 벡터수학엔진.</p>
 
     <div class="solhead">
       <div class="sn">그리고, 진짜 교육</div>
       <h4>설명할 수 있을 때까지, <em>차근차근.</em></h4>
       <p class="sd">답을 주는 대신 되묻고, 학생이 자기 언어로 설명할 수 있을 때에만 다음으로 갑니다.
-        언제 개입하고 언제 침묵할 것인가 — 기능은 따라 만들 수 있지만 이 판단은 그렇지 않습니다.
+        언제 개입하고 언제 침묵할 것인가. 기능은 따라 만들 수 있지만 이 판단은 그렇지 않습니다.
         이것이 우리의 교육이자, 해자의 맨 위층입니다.</p>
     </div>
 
     <div class="solhead">
       <div class="sn">경쟁사 분석</div>
       <h4>세 축 위의 <em>경쟁 지형.</em></h4>
-      <p class="sd">이 문제를 보고 있는 회사는 많고, 각자 한두 축은 잘합니다. 교육 AI가 "잘한다"고 말하는 것을
-        <b>단계적 상호작용 · 손풀이 인식 · 지속적 기억</b> 세 축으로 나누고, 그 위에 회사들을 놓았습니다.</p>
+      <p class="sd">교육 철학에서 나온 세 축 <b>단계적 상호작용 · 손풀이 인식 · 지속적 기억</b> 위에 회사들을 놓았습니다.
+        국내에서 벤치마크한 서비스 중 세 축을 모두 통합한 곳은 Provee가 유일했고, 특히 손그림 기하 이해에 기술 우위가 있습니다.
+        다만 세계로 눈을 돌리면 같은 비전을 추구하는 회사들이 보이고, AI가 발전할수록 이 기능들은 결국 널리 보급됩니다.
+        그래서 해자를 따로 적습니다.</p>
     </div>
     <div class="venn" role="img" aria-label="단계적 상호작용, 손풀이 인식, 지속적 기억 세 축 위의 경쟁 지형">
       <div class="axis a1">단계적 상호작용</div>
@@ -752,7 +760,7 @@
     <p class="fxc" style="margin-top:22px;">2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다. 세 축의 정의와 판정 기준은 자체 기준입니다.</p>
 
     <div class="solhead">
-      <div class="sn">해자 — 세 층</div>
+      <div class="sn">해자 · 세 층</div>
       <h4>한국에서만 나오는 손글씨 데이터로<br /><em>파인튜닝된 모델과 진짜 교육.</em></h4>
       <p class="sd">왜 따라잡기 어려운지를 세 층으로 나눠 적습니다. 아래층이 위층을 받칩니다.</p>
     </div>
@@ -760,54 +768,57 @@
   <div class="wrap">
     <div class="moat">
       <div class="mo">
-        <div class="lv">Layer 1 — Data</div>
+        <div class="lv">Layer 1 · Data</div>
         <h5>세계에서 가장 조밀한<br />손글씨 수학 스트림</h5>
-        <p>한국 고교생 자습 <b>125분/일</b>, 미국 <b>45분/일</b> — 2.8배. 핵심은 양이 아니라 형태입니다.
+        <p>한국 고교생 자습 <b>125분/일</b>, 미국 <b>45분/일</b>. 2.8배입니다. 핵심은 양이 아니라 형태입니다.
           사진이 아니라 <b>획·지움·멈춤을 벡터로</b> 잡습니다. 최종 답은 이미 상품화됐지만,
           학생이 밟은 경로는 아직 아무도 소유하지 않았습니다.</p>
         <span class="st on">축적 중</span>
       </div>
       <div class="mo">
-        <div class="lv">Layer 2 — Model</div>
+        <div class="lv">Layer 2 · Model</div>
         <h5>API 래퍼가 아닌<br />수학 특화 스택</h5>
         <p>축적한 데이터로 손글씨 추론에 파인튜닝해, 범용 API 호출자가 맞출 수 없는
           <b>원가·정확도 구조</b>를 만들려 합니다.</p>
         <span class="st">아직 학습 전</span>
       </div>
       <div class="mo">
-        <div class="lv">Layer 3 — Pedagogy</div>
+        <div class="lv">Layer 3 · Pedagogy</div>
         <h5>언제 개입하고<br />언제 침묵할 것인가</h5>
-        <p>humanlike를 넘어 <b>teacher-like</b>. 답을 내주는 엔진은 그 판단을 관측한 적이 없습니다.
-          기능 목록으로 정의한 해자는 따라잡히지만, 개입 시점 판단은 따라잡기 어렵습니다.</p>
+        <p>기술도, 데이터 자체도 아닙니다. 데이터에서 배우는 것, 곧 <b>인간이 수학을 배우는 방식</b>입니다.
+          어디서 멈추고, 무엇을 지우고, 언제 전략을 바꾸는지. 그래서 교육의 근본 질문을 연구할 수 있습니다.
+          <b>AI 선생님은 언제 개입하고, 언제 침묵해야 하는가.</b></p>
         <span class="st on">설계·운영 중</span>
       </div>
     </div>
     <div class="col" style="margin:0 auto;">
       <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 · U.S. BLS American Time Use Survey.
         2.8배는 자습시간 비율에서 나온 값이며 손글씨 양을 직접 실측한 수치는 아닙니다.
-        그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
+        AI가 발전할수록 중요한 질문은 AI가 학생에게 무엇을 해줄 수 있느냐가 아니라,
+        <b>학생이 스스로 계속해야 하는 것이 무엇이냐</b>입니다. 장기 해자는 더 나은 답을 만드는 것이 아니라,
+        인간의 수학 학습에 대한 가장 깊은 이해를 쌓아 생각을 학생 곁에 남겨두는 것입니다.</p>
     </div>
     <div class="col" style="margin:0 auto;">
       <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 · U.S. BLS American Time Use Survey.
         2.8배는 자습시간 비율에서 나온 값이며 손글씨 양을 직접 실측한 수치는 아닙니다.
-        그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
+        그리고 기술만으로 해자가 되지는 않는다고 봅니다. 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
     </div>
   </div>
 </section>
 
 <section class="sec up" id="validation">
   <div class="wrap col">
-    <div class="no"><b>05 — VALIDATION</b><span></span></div>
-    <h3>검증 <em>결과.</em></h3>
-    <p class="sub">만들기 전에 물었고, 만든 뒤에 다시 물었습니다. 사전 수요 설문 — 중·고등학생과 대학생 <b>105명</b>, 2026년 7월, 온라인.</p>
+    <div class="no"><b>05 · 검증</b><span></span></div>
+    <h3>105명의 수요,<br /><em>18명의 실사용 검증.</em></h3>
+    <p class="sub">만들기 전에 물었고, 만든 뒤에 다시 물었습니다. 사전 수요 설문 · 중·고등학생과 대학생 <b>105명</b>, 2026년 7월, 온라인.</p>
     <div class="vgrid">
       <div class="vstat"><div class="v">84%</div><p>중·고등학생 "쓰겠다"</p></div>
       <div class="vstat"><div class="v">93%</div><p>AI로 공부해 본 대학생 "쓰겠다"</p></div>
       <div class="vstat"><div class="v">91%</div><p>대학생 "고교 때 있었다면 썼다"</p></div>
-      <div class="vstat"><div class="v">66%</div><p>필요 기능 1위 — 손풀이 과정 분석</p></div>
+      <div class="vstat"><div class="v">66%</div><p>필요 기능 1위 · 손풀이 과정 분석</p></div>
     </div>
 
-    <p class="sub" style="margin-top:40px;">MVP 실사용 검증 — 학생 <b>18명</b>이 손글씨 풀이를 실제로 올려 채점 전 과정을 검증했습니다
+    <p class="sub" style="margin-top:40px;">MVP 실사용 검증 · 학생 <b>18명</b>이 손글씨 풀이를 실제로 올려 채점 전 과정을 검증했습니다
       (대구 화원고 2학년 포함, 2026년 7월).</p>
     <div class="vgrid">
       <div class="vstat"><div class="v">4.7<span style="font-size:16px;color:var(--muted);"> / 5</span></div><p>MVP 사용자 만족도</p></div>
@@ -834,9 +845,9 @@
 
 <section class="sec tint up" id="model">
   <div class="wrap col">
-    <div class="no"><b>06 — HOW WE MAKE MONEY</b><span></span></div>
-    <h3>비즈니스 <em>모델.</em></h3>
-    <p class="sub">강점은 하나 — <b>개인화된 교육의 합리적인 가격.</b>
+    <div class="no"><b>06 · 비즈니스 모델</b><span></span></div>
+    <h3>개인화 교육의<br /><em>합리적 가격.</em></h3>
+    <p class="sub">강점은 하나입니다. <b>개인화된 교육의 합리적인 가격.</b>
       과외급 개인화를 인강 아래 가격에, 그 값을 누구에게 어떻게 받는지입니다.</p>
     <div class="darkchart">
           <div class="ct2">가격 포지셔닝</div>
@@ -877,7 +888,7 @@
             </g>
           </svg>
         </div>
-    <p class="fxc">1:1 실시간 개입이면서 인강보다 낮은 가격대 — 출처: 「2025년 초중고사교육비조사」 · 각 사 공시 정가</p>
+    <p class="fxc">1:1 실시간 개입이면서 인강보다 낮은 가격대. 출처: 「2025년 초중고사교육비조사」 · 각 사 공시 정가</p>
 
     <div class="posbig wide">
       <div>
@@ -886,20 +897,20 @@
       </div>
       <div>
         <div class="a3">월 99,000원</div>
-        <div class="a4">개인화는 과외급으로, 가격은 인강 아래로 —
-          <b>개인화에 동행하는 가격 상승이라는 기존 공식을 깹니다.</b></div>
+        <div class="a4">개인화는 과외급으로, 가격은 인강 아래로.
+          <b>개인화에 동행하는 가격 상승이라는 공식을 깹니다.</b></div>
       </div>
     </div>
     <p class="pnote">개인과외 59.1만 · 학원 74.8만 · 인강 13.6만은 고교 일반교과 참여학생 기준 통계이고 Provee는 수학 단과 정가라,
       직접 비교는 보수적으로 읽어야 합니다. 출처: 「2025년 초중고사교육비조사」 · 각 사 공시 정가.</p>
 
     <div style="margin-top:34px;">
-      <div class="prow"><div class="t">중·고등학생 정기 구독<span>사용자 ≠ 결제자 — 학부모 결제</span></div><div class="v">월 99,000원</div></div>
-      <div class="prow"><div class="t">대학생 · 중간고사 패스 3주<span>사용자 = 결제자 — 시험기간에 몰림</span></div><div class="v">69,000원</div></div>
+      <div class="prow"><div class="t">중·고등학생 정기 구독<span>사용자 ≠ 결제자 · 학부모 결제</span></div><div class="v">월 99,000원</div></div>
+      <div class="prow"><div class="t">대학생 · 중간고사 패스 3주<span>사용자 = 결제자 · 시험기간에 몰림</span></div><div class="v">69,000원</div></div>
       <div class="prow"><div class="t">대학생 · 일주일의 전사 7일</div><div class="v">29,000원</div></div>
       <div class="prow"><div class="t">대학생 · 24시간의 전사</div><div class="v">9,900원</div></div>
     </div>
-    <p class="pnote">패스는 짧을수록 하루당 단가가 높습니다 — 급할수록 비싸고, 길게 살수록 이득인 구조입니다.</p>
+    <p class="pnote">패스는 짧을수록 하루당 단가가 높습니다. 급할수록 비싸고, 길게 살수록 이득인 구조입니다.</p>
   </div>
 
   <div class="wrap col" style="margin-top:56px;">
@@ -911,7 +922,7 @@
       <div class="cu">
         <div class="ck">B2C · 1</div>
         <h5>한국 고등학생</h5>
-        <p>파인튜닝을 위한 <b>clean한 데이터의 원천</b>이자, 전 세계에서 독보적인 수학 사교육 과열 시장 — 대한민국.</p>
+        <p>파인튜닝을 위한 <b>clean한 데이터의 원천</b>이자, 전 세계에서 독보적인 수학 사교육 과열 시장, 대한민국.</p>
       </div>
       <div class="cu">
         <div class="ck">B2C · 2</div>
@@ -921,7 +932,7 @@
       <div class="cu">
         <div class="ck">B2G</div>
         <h5>미군</h5>
-        <p>대학 진학을 위해 입대한 이들의 <b>수학 학습 적응 지원.</b> 검증 전 단계 — 사용자 인터뷰부터 시작합니다.</p>
+        <p>대학 진학을 위해 입대한 이들의 <b>수학 학습 적응 지원.</b> 검증 전 단계로, 사용자 인터뷰부터 시작합니다.</p>
       </div>
     </div>
 
@@ -981,7 +992,7 @@
       <cite>한국경제 사설 「사교육비 감소가 아니라 양극화… 더 벌어진 교육 격차」 · 2026. 3. 12.</cite>
     </div>
     <p class="pnote">출처: 국가데이터처·교육부 「2025년 초중고사교육비조사」. 참여자 수·감소분은 고교 학생 수와 수학 참여율을 이용한 자체 추정.
-      2025년 800만 원 이상 가구의 참여 학생만 늘었습니다(+6,815명) — 가계 부담으로 떠난 수요를 가격으로 다시 부릅니다.</p>
+      2025년 800만 원 이상 가구의 참여 학생만 늘었습니다(+6,815명). 가계 부담으로 떠난 수요를 가격으로 다시 부릅니다.</p>
   </div>
 
   <div class="wrap col" style="margin-top:44px;">
@@ -1023,9 +1034,9 @@
 
 <section class="sec up" id="milestone">
   <div class="wrap col">
-    <div class="no"><b>07 — MILESTONE</b><span></span></div>
-    <h3>비전과 <em>마일스톤.</em></h3>
-    <p class="sub">하나의 엔진으로 시장의 천장을 세 번 깹니다 — 고등학생 정기 구독 → 대학생 패스 → 해외 수학 시장.
+    <div class="no"><b>07 · 마일스톤</b><span></span></div>
+    <h3>세 번 깨는<br /><em>시장의 천장.</em></h3>
+    <p class="sub">하나의 엔진으로 시장의 천장을 세 번 깹니다. 고등학생 정기 구독 → 대학생 패스 → 해외 수학 시장.
       그리고 올해의 걸음입니다.</p>
     <div class="phase">
       <div class="ph1">
@@ -1053,28 +1064,28 @@
     <div class="road">
       <div class="stop done">
         <div class="dot">7월</div>
-        <div class="st">18명 <em>MVP 실사용 검증</em> — 완료</div>
+        <div class="st">18명 <em>MVP 실사용 검증</em> · 완료</div>
         <div class="sd">손글씨 채점 MVP 실사용. 재사용 의향·지불 의사·정성 피드백 검증 (7.27–7.30).</div>
       </div>
       <div class="stop done">
         <div class="dot">8.5</div>
-        <div class="st">Plug and Play <em>피칭</em> — 완료</div>
+        <div class="st">Plug and Play <em>피칭</em> · 완료</div>
         <div class="sd">실리콘밸리 혁신 플랫폼에서 IR 데모. 선발이나 투자가 확정된 것은 아닙니다.</div>
       </div>
       <div class="stop">
         <div class="dot">9월<br />중순</div>
         <div class="st">200명 <em>2차 베타</em></div>
-        <div class="sd">목회자·선교사 자녀 200명 실사용 — 반복 사용·개인화 정확도·제품 안정성 검증.</div>
+        <div class="sd">목회자·선교사 자녀 200명 실사용 · 반복 사용·개인화 정확도·제품 안정성 검증.</div>
       </div>
       <div class="stop">
         <div class="dot">10월</div>
         <div class="st">90명 <em>B2B 파일럿</em></div>
-        <div class="sd">강동구 수학학원 50명 · MK스쿨 40명 — 학생관리 기능·현장 운영성 검증.</div>
+        <div class="sd">강동구 수학학원 50명 · MK스쿨 40명 · 학생관리 기능·현장 운영성 검증.</div>
       </div>
       <div class="stop">
         <div class="dot">11월</div>
         <div class="st">문제 콘텐츠 <em>파트너십</em></div>
-        <div class="sd">7개 지점 규모 구주이배 수학학원과 문제 공급 파트너십 추진 — 논의 단계입니다.</div>
+        <div class="sd">7개 지점 규모 구주이배 수학학원과 문제 공급 파트너십 추진, 논의 단계입니다.</div>
       </div>
     </div>
   </div>
@@ -1083,8 +1094,8 @@
 <section class="sec tint up" id="team">
   <div class="wrap">
     <div class="col" style="margin:0 auto;">
-      <div class="no"><b>08 — OUR TEAM</b><span></span></div>
-      <h3>팀 <em>소개.</em></h3>
+      <div class="no"><b>08 · 팀</b><span></span></div>
+      <h3>이 문제를 직접 겪은<br /><em>사람들.</em></h3>
       <p class="sub">LLM 수학 추론을 연구하는 NeurIPS 2025 공동 제1저자가 기술 자문으로 함께합니다.</p>
     </div>
 
@@ -1196,7 +1207,8 @@
       <p class="qq">"<em>나만의 수학 선생님</em>이 진짜 생긴다면, 딱 <em>한 가지</em> 꼭 해줬으면 하는 게 뭔가요?"</p>
       <div class="big">"칭찬해주세용"</div>
       <div class="who">고등학교 2학년 (n=1 인용)</div>
-      <p class="tail">누군가 내 생각을 알아주고,<br />조금씩 나아지는 나를 함께 기뻐해 주는 배움.</p>
+      <p class="tail">배움은 실수를 고치는 것만이 아닙니다.<br />
+        내가 얼마나 애썼는지 기억해 주는 누군가가 있는 것이기도 합니다.</p>
     </div>
   </div>
 </section>
@@ -1206,7 +1218,8 @@
   <div class="wrap col">
     <div class="k">Contact</div>
     <h3>Provee<em>.</em></h3>
-    <p>법인 설립 준비 중, 라운드 오픈 전입니다. 자료에 대한 피드백과 만남을 환영합니다.</p>
+    <p>"왜 틀렸는지 모르겠어요"가 "제가 설명해볼게요"가 될 때까지, 곁에 서 있는 AI 선생님.<br />
+      법인 설립 준비 중, 라운드 오픈 전입니다. 자료에 대한 피드백과 만남을 환영합니다.</p>
     <div class="acts">
       <a class="btn g" href="mailto:soomin.kim@urpedu.com?subject=Provee">이메일 보내기</a>
       <a class="btn g" href="https://provee-mvp.vercel.app/#student" target="_blank" rel="noopener">제품 열어 보기</a>
