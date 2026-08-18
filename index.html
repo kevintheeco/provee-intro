@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ko" data-mode="plain">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Provee · 회사 소개</title>
+<link rel="icon" href="assets/brand/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Gowun+Batang:wght@400;700&family=Poppins:wght@600;700&display=swap" />
+<style>
+  :root{
+    --paper:#FAF6EC; --paper2:#F2EBDB; --card:#FFFDF8; --card2:#FBF6EA;
+    --ink:#1E1811; --ink2:#544B3D; --muted:#8A7E6A; --line:#E4DAC7; --line2:#EFE7D8;
+    --wine:#8A1C2B; --wine-d:#A7303E; --wine-deep:#5E1220; --wine-tint:#F3E3E0; --wine-line:#E2C7C4;
+    --f:"Pretendard Variable","Pretendard",-apple-system,"Apple SD Gothic Neo",sans-serif;
+    --kr:"Gowun Batang",serif; --en:"Fraunces",serif; --wm:"Poppins",sans-serif;
+    --e:cubic-bezier(.32,.72,0,1);
+    --soft:0 1px 2px rgba(30,24,17,.04), 0 6px 14px -8px rgba(30,24,17,.14), inset 0 1.5px 3px rgba(255,255,255,.9);
+    --deep:0 2px 6px rgba(30,24,17,.06), 0 26px 46px -30px rgba(30,24,17,.42);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--f); line-height:1.8;
+    letter-spacing:-.014em; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; overflow-x:clip;}
+  body::after{content:""; position:fixed; inset:0; z-index:90; pointer-events:none; opacity:.42; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.88' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='150' height='150' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");}
+  h1,h2,h3,h4,h5{margin:0; line-height:1.14; letter-spacing:-.04em; font-weight:800; text-wrap:balance;}
+  p{margin:0;} a{color:inherit;} ol,ul{margin:0; padding:0; list-style:none;}
+  ::selection{background:var(--wine); color:#fff;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 30px;}
+  .col{max-width:700px; margin:0 auto;}
+  .up{opacity:0; transform:translateY(26px); transition:opacity .9s var(--e), transform .9s var(--e);}
+  .up.in{opacity:1; transform:none;}
+  @media(prefers-reduced-motion:reduce){ .up{opacity:1!important; transform:none!important;} }
+  [data-mode="plain"] .only-faith{display:none;}
+  [data-mode="faith"] .only-plain{display:none;}
+
+  .kicker{display:inline-flex; align-items:center; gap:9px; font-size:10.5px; font-weight:700; letter-spacing:.24em;
+    text-transform:uppercase; color:var(--wine); background:var(--wine-tint); padding:7px 15px; border-radius:999px;}
+  .kicker b{width:5px; height:5px; border-radius:50%; background:var(--wine);}
+
+  .btn{display:inline-flex; align-items:center; gap:10px; border:0; cursor:pointer; font-family:inherit; font-weight:700;
+    font-size:14.5px; padding:13px 24px; border-radius:999px; transition:transform .5s var(--e), background .5s var(--e);}
+  .btn:hover{transform:translateY(-1.5px);}
+  .btn.w{background:var(--wine); color:#FFF6F3;
+    box-shadow:0 2px 5px rgba(94,18,32,.18), 0 14px 26px -14px rgba(94,18,32,.6), inset 0 1.5px 4px rgba(255,255,255,.22);}
+  .btn.w:hover{background:var(--wine-deep);}
+  .btn.g{background:var(--card); color:var(--ink); box-shadow:var(--soft);}
+
+  /* 읽기 방식 토글 */
+  .seg{display:inline-flex; padding:4px; border-radius:999px; background:var(--paper2); box-shadow:inset 0 0 0 1px var(--line);}
+  .seg button{appearance:none; border:0; cursor:pointer; font-family:inherit; font-size:13px; font-weight:700;
+    padding:8px 18px; border-radius:999px; background:transparent; color:var(--muted); transition:all .35s var(--e);}
+  .seg button.on{background:var(--card); color:var(--wine-deep); box-shadow:var(--soft);}
+  .modebar{display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:16px;}
+  .modebar .ml{font-size:13px; color:var(--muted);}
+
+  /* 접기 */
+  .fold{overflow:hidden; max-height:0; opacity:0; transition:max-height .65s var(--e), opacity .4s var(--e);}
+  .fold[data-open="true"]{max-height:5000px; opacity:1;}
+  .foldwrap{display:flex; justify-content:center; margin:26px 0 4px;}
+  .foldbtn{appearance:none; cursor:pointer; font-family:inherit; display:inline-flex; align-items:center; gap:9px;
+    padding:11px 22px; border-radius:999px; border:1.5px solid var(--wine-line); background:var(--card);
+    font-size:13.5px; font-weight:700; color:var(--wine); box-shadow:var(--soft); transition:background .2s var(--e);}
+  .foldbtn:hover{background:var(--wine-tint);}
+  .foldbtn svg{width:14px; height:14px; transition:transform .3s var(--e);}
+  .foldbtn[aria-expanded="true"] svg{transform:rotate(180deg);}
+
+  /* 히어로 */
+  .hero{position:relative; overflow:clip; text-align:center; padding:104px 0 80px;}
+  .wash{position:absolute; inset:-10%; z-index:0; pointer-events:none; overflow:hidden;}
+  .wash span{position:absolute; border-radius:50%; filter:blur(72px); mix-blend-mode:multiply; opacity:.62;}
+  .wash .w1{width:60vw; height:60vw; left:-12vw; top:-22vw;
+    background:radial-gradient(circle, rgba(138,28,43,.34), rgba(138,28,43,.06) 55%, transparent 70%);
+    animation:wash1 30s var(--e) infinite alternate;}
+  .wash .w2{width:52vw; height:52vw; right:-14vw; top:-10vw;
+    background:radial-gradient(circle, rgba(196,146,58,.30), rgba(196,146,58,.05) 55%, transparent 70%);
+    animation:wash2 38s var(--e) infinite alternate;}
+  .wash .w3{width:44vw; height:44vw; left:26vw; bottom:-20vw;
+    background:radial-gradient(circle, rgba(43,101,96,.20), rgba(43,101,96,.04) 55%, transparent 70%);
+    animation:wash3 34s var(--e) infinite alternate;}
+  @keyframes wash1{from{transform:translate3d(0,0,0) scale(1);} to{transform:translate3d(5%,4%,0) scale(1.12);}}
+  @keyframes wash2{from{transform:translate3d(0,0,0) scale(1.06);} to{transform:translate3d(-6%,5%,0) scale(1);}}
+  @keyframes wash3{from{transform:translate3d(0,0,0) scale(1);} to{transform:translate3d(4%,-5%,0) scale(1.1);}}
+  @media(prefers-reduced-motion:reduce){ .wash span{animation:none!important;} }
+  .hin{position:relative; z-index:1;}
+  .lock{display:flex; flex-direction:column; align-items:center; gap:10px;}
+  .lock .tl{font-size:11px; font-weight:800; letter-spacing:.34em; text-transform:uppercase; color:var(--muted);}
+  .lock .wm{font-family:var(--wm); font-weight:700; font-size:clamp(52px,9vw,104px); letter-spacing:-.045em; line-height:.92;}
+  .lock .wm i{font-style:normal; color:var(--wine);}
+  .lock .entag{font-family:var(--en); font-weight:600; font-size:clamp(14px,2vw,19px); color:var(--wine);}
+  .hero h1{margin-top:40px; font-family:var(--kr); font-weight:400; font-size:clamp(26px,4.4vw,50px);
+    line-height:1.34; letter-spacing:-.04em;}
+  .hero h1 em{font-style:normal; color:var(--wine);}
+  .hero .hi{margin-top:22px; font-size:16.5px; color:var(--ink2); line-height:1.95; max-width:44ch; margin-inline:auto;}
+  .hero .hi b{color:var(--ink); font-weight:700;}
+
+  .creedbox{margin:44px auto 0; max-width:660px; padding:30px 32px 28px; border-radius:22px;
+    background:var(--card); box-shadow:var(--soft); text-align:left;}
+  .creedbox .lb{display:block; font-family:var(--en); font-size:15px; font-weight:600; color:var(--wine);}
+  .creedbox .txt{margin-top:14px; font-family:var(--kr); font-weight:400; font-size:clamp(16.5px,2.2vw,20px);
+    line-height:1.8; letter-spacing:-.03em;}
+  .creedbox .txt em{font-style:normal; color:var(--wine); font-weight:700;}
+
+  /* 장 표지 */
+  .chapter{padding:104px 0 0;}
+  .chapter .in{display:flex; align-items:baseline; gap:20px; padding-bottom:20px; border-bottom:2px solid var(--wine);}
+  .chapter .n{font-family:var(--en); font-size:clamp(28px,4.6vw,48px); font-weight:700; color:var(--wine); line-height:1;}
+  .chapter h2{font-family:var(--kr); font-weight:400; font-size:clamp(24px,3.6vw,38px); letter-spacing:-.035em; line-height:1.2;}
+  .chapter .en{margin-left:auto; font-family:var(--en); font-size:13px; font-weight:600; letter-spacing:.08em; color:var(--muted); white-space:nowrap;}
+  @media(max-width:700px){ .chapter .en{display:none;} }
+
+  /* 섹션 */
+  .sec{padding:88px 0;}
+  .sec.tint{background:var(--paper2);}
+  .no{display:flex; align-items:baseline; gap:16px; margin-bottom:22px;}
+  .no b{font-family:var(--en); font-size:12.5px; font-weight:700; letter-spacing:.2em; color:var(--wine); white-space:nowrap;}
+  .no span{flex:1; height:1px; background:var(--line);}
+  .sec h3{font-family:var(--kr); font-weight:400; font-size:clamp(26px,4vw,44px); line-height:1.28;
+    letter-spacing:-.038em; max-width:21ch;}
+  .sec h3 em{font-style:normal; color:var(--wine); font-weight:700;}
+  .sec .sub{margin-top:20px; font-size:16.5px; line-height:1.95; color:var(--ink2); max-width:54ch;}
+  .sec .sub b{color:var(--ink); font-weight:700;}
+  .pnote{margin-top:22px; font-size:13px; line-height:1.75; color:var(--muted);}
+  .pnote a{color:var(--wine); font-weight:700;}
+
+  /* 판(사진) */
+  .plate{margin:0; border-radius:18px; overflow:hidden; background:var(--card); box-shadow:var(--soft);}
+  .plate .m{position:relative; background:var(--paper2); overflow:hidden;}
+  .plate .m img{width:100%; display:block;}
+  .plate figcaption{padding:15px 18px 17px; font-size:13.5px; line-height:1.7; color:var(--ink2); border-top:1px solid var(--line2);}
+  .plate figcaption b{color:var(--ink); font-weight:700;}
+
+  .lot{padding:56px 0; border-top:1px solid var(--line);}
+  .lot:first-of-type{border-top:0; padding-top:34px;}
+  .lot h4{font-family:var(--kr); font-weight:400; font-size:clamp(22px,3vw,32px); line-height:1.32; letter-spacing:-.035em;}
+  .lot h4 em{font-style:normal; color:var(--wine); font-weight:700;}
+  .lotgrid{margin-top:26px; display:grid; gap:22px; align-items:start;}
+  @media(min-width:900px){ .lotgrid{grid-template-columns:1.05fr .95fr; gap:32px;} }
+  .card{border-radius:20px; padding:26px 26px 24px; background:var(--card2); box-shadow:inset 0 0 0 1px var(--line2);}
+  .card .lb{display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:800; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--muted);}
+  .card .lb::before{content:""; width:14px; height:1.5px; background:currentColor;}
+  .card p{margin-top:12px; font-size:15.5px; line-height:1.9; color:var(--ink2);}
+  .card p b{color:var(--ink); font-weight:700;}
+  .card.sol{background:var(--wine-tint); box-shadow:inset 0 0 0 1px var(--wine-line); border-left:3px solid var(--wine);}
+  .card.sol .lb{color:var(--wine);}
+  .card.sol p{color:#4A2A28;} .card.sol p b{color:var(--wine-deep); font-weight:700;}
+
+  /* 두 아들 */
+  .duo{margin-top:40px; padding:32px 28px 30px; border-radius:24px; background:var(--card); box-shadow:var(--soft);}
+  .duo-h{text-align:center; margin-bottom:26px;}
+  .duo-h .k{font-size:11px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--muted);}
+  .duo-h h4{margin-top:10px; font-family:var(--kr); font-weight:400; font-size:clamp(21px,2.9vw,30px); letter-spacing:-.035em;}
+  .duo-h h4 em{font-style:normal; color:var(--wine); font-weight:700;}
+  .duo-g{display:grid; gap:18px; align-items:start;}
+  @media(min-width:820px){ .duo-g{grid-template-columns:1fr auto 1fr; gap:22px;} }
+  .son{margin:0;}
+  .son .pics{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+  .son .pics img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; display:block; background:var(--paper2);}
+  .son figcaption{margin-top:14px;}
+  .son figcaption b{display:block; font-size:15px; font-weight:800; color:var(--wine-deep);}
+  .son figcaption p{margin-top:6px; font-size:14px; line-height:1.72; color:var(--ink2);}
+  .son figcaption i{font-style:normal; font-weight:800; color:var(--ink);}
+  .duo-vs{display:grid; place-items:center;}
+  .duo-vs span{font-family:var(--en); font-size:13px; font-weight:700; letter-spacing:.12em; color:var(--muted);
+    padding:8px 12px; border-radius:999px; background:var(--paper2);}
+  .duo-a{margin-top:26px; padding-top:22px; border-top:1px solid var(--line2);
+    font-family:var(--kr); font-size:clamp(16px,2.2vw,20px); line-height:1.78; letter-spacing:-.03em; color:var(--ink);}
+  .duo-a b{color:var(--wine); font-weight:700;}
+
+  /* 정의·증언 카드 */
+  .defn{margin:36px 0; border-radius:22px; background:var(--card); box-shadow:var(--soft); overflow:hidden;}
+  .defn .dh{display:flex; align-items:center; gap:12px; padding:13px 24px; background:var(--wine); color:#FFF1EE;}
+  .defn .dh b{font-size:10.5px; font-weight:800; letter-spacing:.2em; text-transform:uppercase;}
+  .defn .dh span{margin-left:auto; font-family:var(--en); font-size:12.5px; opacity:.88; white-space:nowrap;}
+  .defn .db{padding:24px 24px 22px;}
+  .defn .term{font-family:var(--kr); font-weight:400; font-size:clamp(19px,2.7vw,26px); letter-spacing:-.03em; line-height:1.45;}
+  .defn .term em{font-style:normal; color:var(--wine); font-weight:700;}
+  .defn .desc{margin-top:13px; font-size:15px; line-height:1.9; color:var(--ink2);}
+  .defn cite{display:block; margin-top:16px; padding-top:13px; border-top:1px solid var(--line2);
+    font-style:normal; font-size:12.5px; color:var(--muted);}
+
+  /* 순환 */
+  .loop{margin:34px 0; padding:30px 26px 26px; border-radius:24px; background:var(--card); box-shadow:var(--soft);}
+  .loop.bad{background:var(--card2); box-shadow:inset 0 0 0 1px var(--line);}
+  .loop .lt{display:flex; align-items:center; gap:12px; margin-bottom:22px;}
+  .loop .lt b{font-size:11px; font-weight:800; letter-spacing:.18em; text-transform:uppercase; color:var(--muted);}
+  .loop.good .lt b{color:var(--wine);}
+  .loop .lt span{flex:1; height:1px; background:var(--line);}
+  .steps{display:grid; gap:12px;}
+  @media(min-width:880px){ .steps{grid-template-columns:repeat(5,1fr); gap:9px;} }
+  .steps li{position:relative; padding:16px 14px; border-radius:14px; background:var(--paper2); text-align:center;}
+  .loop.good .steps li{background:var(--wine-tint);}
+  .steps li .n{display:block; font-family:var(--en); font-size:11px; font-weight:700; letter-spacing:.16em; color:var(--muted); margin-bottom:7px;}
+  .loop.good .steps li .n{color:var(--wine);}
+  .steps li p{font-size:13.5px; line-height:1.6; font-weight:700; color:var(--ink);}
+  .loop.good .steps li:last-child{background:var(--wine);}
+  .loop.good .steps li:last-child p{color:#FFF6F3;}
+  .loop.good .steps li:last-child .n{color:#E8B7B0;}
+  .backrow{margin-top:16px; display:flex; align-items:center; gap:12px; padding:13px 16px; border-radius:14px;
+    background:var(--paper2); box-shadow:inset 0 0 0 1px var(--line);}
+  .backrow p{font-size:13.5px; font-weight:700; color:var(--ink2);}
+  .backrow.win{background:var(--wine-tint); box-shadow:inset 0 0 0 1px var(--wine-line);}
+  .backrow.win p{color:var(--wine-deep);}
+  .backrow .ar{width:26px; height:26px; border-radius:999px; background:var(--card); display:grid; place-items:center;
+    flex:0 0 auto; box-shadow:inset 0 0 0 1px var(--line); font-size:13px; color:var(--ink2);}
+  .backrow.win .ar{background:var(--wine); color:#FFF6F3; box-shadow:none;}
+
+  .big{margin:40px 0; font-family:var(--kr); font-weight:400; font-size:clamp(21px,3vw,30px);
+    line-height:1.56; letter-spacing:-.03em; text-align:center; text-wrap:balance;}
+  .big em{font-style:normal; color:var(--wine); font-weight:700;}
+  .amp{margin:32px 0; display:grid; gap:13px;}
+  @media(min-width:720px){ .amp{grid-template-columns:1fr 1fr;} }
+  .amp div{padding:24px 22px; border-radius:18px; background:var(--card); box-shadow:var(--soft);}
+  .amp div.dim{background:transparent; box-shadow:inset 0 0 0 1.5px var(--line);}
+  .amp .h{font-size:13px; font-weight:800; color:var(--wine); margin-bottom:7px;}
+  .amp div.dim .h{color:var(--muted);}
+  .amp p{font-size:14.5px; line-height:1.8; color:var(--ink2);}
+
+  /* 창립자 */
+  .chap{display:grid; gap:8px; padding:24px 0; border-top:1px solid var(--line2);}
+  @media(min-width:760px){ .chap{grid-template-columns:150px 1fr; gap:26px;} }
+  .chap:first-of-type{border-top:0;}
+  .chap .side{font-size:12.5px; font-weight:800; letter-spacing:.06em; color:var(--wine); padding-top:5px;}
+  .chap .side em{display:block; font-style:normal; font-family:var(--en); font-size:12px; color:var(--muted); margin-top:4px;}
+  .chap .big2{font-family:var(--kr); font-weight:400; font-size:clamp(18px,2.5vw,23px); line-height:1.6; letter-spacing:-.03em;}
+  .chap .big2 em{font-style:normal; color:var(--wine); font-weight:700;}
+  .chap .sm{margin-top:10px; font-size:15px; line-height:1.9; color:var(--ink2);}
+  .verse{margin-top:16px; padding-left:20px; border-left:2px solid var(--wine);
+    font-family:var(--kr); font-size:17px; line-height:1.7; color:var(--wine-deep);}
+  .verse span{display:block; margin-top:6px; font-family:var(--f); font-size:12.5px; color:var(--muted);}
+  .sclose{margin-top:30px; padding-top:24px; border-top:1px solid var(--line2);
+    font-family:var(--kr); font-size:clamp(18px,2.5vw,24px); line-height:1.6; letter-spacing:-.03em; text-align:center;}
+  .sclose em{font-style:normal; color:var(--wine); font-weight:700;}
+
+  /* 미션 보드 */
+  .board{margin:34px auto 0; max-width:720px; position:relative;}
+  .board::before{content:""; position:absolute; left:24px; top:12px; bottom:34px; width:2px; z-index:0;
+    background:repeating-linear-gradient(180deg, var(--wine-line) 0 8px, transparent 8px 16px);}
+  @media(max-width:640px){ .board::before{left:18px;} }
+  .scene{position:relative; z-index:1; display:grid; gap:12px; padding:0 0 30px 68px;}
+  @media(max-width:640px){ .scene{padding-left:54px;} }
+  .scene .sn{position:absolute; left:0; top:0; width:50px; height:50px; border-radius:50%; display:grid; place-items:center;
+    background:var(--card); box-shadow:inset 0 0 0 1.5px var(--wine-line), var(--soft);
+    font-family:var(--en); font-size:14px; font-weight:700; color:var(--wine);}
+  @media(max-width:640px){ .scene .sn{width:38px; height:38px; font-size:12px;} }
+  .scene.last .sn{background:var(--wine); color:#FFF1EE; box-shadow:0 12px 24px -14px rgba(94,18,32,.6);}
+  .scene .big3{font-family:var(--kr); font-weight:400; font-size:clamp(19px,2.7vw,27px); line-height:1.5; letter-spacing:-.03em;}
+  .scene .big3 em{font-style:normal; color:var(--wine); font-weight:700;}
+  .scene .sm3{font-size:15px; line-height:1.9; color:var(--ink2);}
+  .scene .sm3 b{color:var(--ink); font-weight:700;}
+  .vclose{max-width:720px; margin:20px auto 0; padding:28px 30px; border-radius:22px; background:var(--wine);
+    color:#FFF1EE; box-shadow:0 18px 36px -22px rgba(94,18,32,.6);}
+  .vclose p{font-family:var(--kr); font-weight:400; font-size:clamp(19px,2.7vw,26px); line-height:1.5; letter-spacing:-.03em;}
+  .vclose p em{font-style:normal; color:#F0BDB6; font-weight:700;}
+
+  /* 시장 숫자 */
+  .mstat{margin:26px 0 8px; display:grid; gap:13px;}
+  @media(min-width:940px){ .mstat{grid-template-columns:repeat(3,1fr);} }
+  .mstat div{border-radius:18px; background:var(--card); box-shadow:inset 0 0 0 1px var(--line); padding:20px 22px;}
+  .mstat .v{font-family:var(--en); font-size:26px; font-weight:700; color:var(--wine); letter-spacing:-.02em;}
+  .mstat p{margin-top:6px; font-size:13px; line-height:1.7; color:var(--ink2);}
+
+  .prow{display:grid; grid-template-columns:1fr auto; gap:16px; align-items:baseline;
+    padding:16px 0; border-top:1px solid var(--line);}
+  .prow .t{font-size:15px; font-weight:700;}
+  .prow .t span{display:block; font-size:13px; font-weight:400; color:var(--muted); margin-top:3px;}
+  .prow .v{font-family:var(--en); font-size:19px; font-weight:700; color:var(--wine); white-space:nowrap;}
+  .prow .v.tbd{color:var(--muted); font-size:14px;}
+
+  .bars{margin-top:24px; display:grid; gap:10px;}
+  .bar{display:grid; grid-template-columns:96px 1fr auto; gap:12px; align-items:center; font-size:13.5px;}
+  .bar .nm{color:var(--ink2);}
+  .bar .tr{height:12px; border-radius:999px; background:var(--paper2); overflow:hidden;}
+  .bar .fl{height:100%; border-radius:999px; background:var(--line);}
+  .bar.us .fl{background:var(--wine);}
+  .bar.us .nm{color:var(--wine-deep); font-weight:800;}
+  .bar .pv{font-family:var(--en); font-weight:700; color:var(--ink2);}
+  .bar.us .pv{color:var(--wine);}
+
+  /* 3층위 */
+  .layers{margin-top:26px; display:grid; gap:10px;}
+  .layer{display:grid; grid-template-columns:88px 1fr auto; gap:16px; align-items:center;
+    padding:18px 20px; border-radius:16px; background:var(--card2); box-shadow:inset 0 0 0 1px var(--line2);}
+  @media(max-width:720px){ .layer{grid-template-columns:1fr; gap:6px;} }
+  .layer .lv{font-family:var(--en); font-size:12.5px; font-weight:700; letter-spacing:.1em; color:var(--muted);}
+  .layer .tx{font-size:14.5px; line-height:1.75; color:var(--ink2);}
+  .layer .tx b{color:var(--ink); font-weight:800;}
+  .layer .who{font-size:12.5px; color:var(--muted); white-space:nowrap;}
+  .layer.us{background:var(--wine-tint); box-shadow:inset 0 0 0 1px var(--wine-line); border-left:3px solid var(--wine);}
+  .layer.us .lv{color:var(--wine);} .layer.us .tx b{color:var(--wine-deep);}
+  .layer.us .who{color:var(--wine); font-weight:800;}
+
+  /* 해자 3층 */
+  .moat{margin-top:30px; display:grid; gap:13px;}
+  @media(min-width:900px){ .moat{grid-template-columns:repeat(3,1fr);} }
+  .mo{padding:24px 22px; border-radius:20px; background:var(--card); box-shadow:var(--soft);}
+  .mo .lv{font-family:var(--en); font-size:11.5px; font-weight:700; letter-spacing:.16em; color:var(--wine);}
+  .mo h5{margin-top:9px; font-family:var(--kr); font-weight:400; font-size:20px; letter-spacing:-.03em;}
+  .mo p{margin-top:10px; font-size:14px; line-height:1.82; color:var(--ink2);}
+  .mo p b{color:var(--ink); font-weight:700;}
+  .mo .st{margin-top:12px; display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.04em;
+    padding:5px 11px; border-radius:999px; background:var(--paper2); color:var(--muted);}
+  .mo .st.on{background:var(--wine-tint); color:var(--wine);}
+
+  /* 비워둔 것 */
+  .empty{margin-top:26px; border-radius:20px; overflow:hidden; box-shadow:inset 0 0 0 1px var(--line);}
+  .erow{display:grid; grid-template-columns:132px 1fr; gap:16px; padding:15px 20px; background:var(--card);
+    border-top:1px solid var(--line2); font-size:14px; line-height:1.7;}
+  .erow:first-child{border-top:0;}
+  .erow .k{font-weight:800; color:var(--wine-deep);}
+  .erow .d{color:var(--ink2);}
+  @media(max-width:600px){ .erow{grid-template-columns:1fr; gap:4px;} }
+  .quotes{margin-top:24px; display:grid; gap:12px;}
+  @media(min-width:760px){ .quotes{grid-template-columns:1fr 1fr;} }
+  .qt{padding:22px 22px 20px; border-radius:18px; background:var(--card); box-shadow:var(--soft);}
+  .qt p{font-family:var(--kr); font-size:16px; line-height:1.72; letter-spacing:-.02em;}
+  .qt .who{margin-top:12px; font-size:12.5px; color:var(--muted);}
+
+  /* 팀 */
+  .lead-mem{margin-top:36px; display:grid; gap:0; border-radius:22px; overflow:hidden;
+    background:var(--card); box-shadow:var(--deep);}
+  @media(min-width:820px){ .lead-mem{grid-template-columns:330px 1fr;} }
+  .lead-mem .ph{background:var(--paper2); position:relative; min-height:300px;}
+  .lead-mem .ph img{width:100%; height:100%; object-fit:cover; object-position:center 22%; display:block;}
+  @media(max-width:819px){ .lead-mem .ph{aspect-ratio:4/3;} }
+  .lead-mem .bd{padding:32px 32px 30px;}
+  .lead-mem h4{font-size:26px; font-weight:800; letter-spacing:-.03em;}
+  .lead-mem .ro{display:inline-block; margin-top:9px; font-size:12px; font-weight:800; letter-spacing:.04em;
+    padding:5px 13px; border-radius:999px; background:var(--wine-tint); color:var(--wine);}
+  .lead-mem .sch{margin-top:10px; font-size:13.5px; color:var(--muted);}
+  .pts{margin-top:20px; display:grid; gap:11px;}
+  .pts li{display:grid; grid-template-columns:auto 1fr; gap:12px; font-size:14px; line-height:1.72;}
+  .pts .pk{font-weight:800; color:var(--wine); white-space:nowrap;}
+  .pts .pd{color:var(--ink2);}
+  @media(max-width:520px){ .pts li{grid-template-columns:1fr; gap:2px;} }
+
+  .team{margin-top:14px; display:grid; gap:13px;}
+  @media(min-width:700px){ .team{grid-template-columns:1fr 1fr;} }
+  @media(min-width:1000px){ .team{grid-template-columns:repeat(3,1fr);} }
+  .mem{padding:24px 22px; border-radius:20px; background:var(--card); box-shadow:var(--soft);}
+  .mem .hd{display:flex; align-items:center; gap:14px;}
+  .mem .av{width:56px; height:56px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+    box-shadow:inset 0 0 0 1.5px var(--wine); background:var(--paper2);}
+  .mem .av img{width:100%; height:100%; object-fit:cover; display:block;}
+  .mem .nm{font-size:16px; font-weight:800; letter-spacing:-.02em;}
+  .mem .ro{margin-top:3px; font-size:12.5px; font-weight:700; color:var(--wine);}
+  .mem .sch{margin-top:2px; font-size:12px; color:var(--muted);}
+  .mem .pts{margin-top:16px; gap:9px;}
+  .mem .pts li{font-size:13px; line-height:1.65;}
+
+  .advisor{margin-top:14px; padding:26px 26px 24px; border-radius:22px; background:var(--card2);
+    box-shadow:inset 0 0 0 1px var(--line); border-left:3px solid var(--wine);}
+  .advisor .hd{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .advisor .av{width:62px; height:62px; border-radius:50%; overflow:hidden; flex:0 0 auto;
+    box-shadow:inset 0 0 0 1.5px var(--wine); background:var(--paper2);}
+  .advisor .av img{width:100%; height:100%; object-fit:cover; display:block;}
+  .advisor .lb{font-family:var(--en); font-size:11.5px; font-weight:700; letter-spacing:.16em; color:var(--wine);}
+  .advisor .nm{margin-top:4px; font-size:19px; font-weight:800;}
+  .advisor .sch{margin-top:3px; font-size:12.5px; color:var(--muted);}
+  .advisor .hl{margin-left:auto; text-align:right;}
+  .advisor .hl .t{font-size:16px; font-weight:800; color:var(--wine-deep);}
+  .advisor .hl .s{font-size:12px; color:var(--muted); margin-top:3px;}
+  @media(max-width:760px){ .advisor .hl{margin-left:0; text-align:left; width:100%;} }
+  .advisor .tags{margin-top:18px; display:grid; gap:8px;}
+  @media(min-width:760px){ .advisor .tags{grid-template-columns:1fr 1fr;} }
+  .advisor .tags div{font-size:13px; line-height:1.6; color:var(--ink2);}
+  .advisor .tags b{color:var(--wine); font-weight:700;}
+
+  /* 로드맵 */
+  .road{margin-top:34px; display:grid; gap:12px;}
+  @media(min-width:900px){ .road{grid-template-columns:repeat(4,1fr);} }
+  .stop{padding:22px 20px; border-radius:18px; background:var(--card); box-shadow:var(--soft);}
+  .stop.done{background:var(--wine-tint); box-shadow:inset 0 0 0 1px var(--wine-line);}
+  .stop .w{font-family:var(--en); font-size:12px; font-weight:700; letter-spacing:.14em; color:var(--wine);}
+  .stop h5{margin-top:8px; font-family:var(--kr); font-weight:400; font-size:19px; letter-spacing:-.03em;}
+  .stop p{margin-top:8px; font-size:13.5px; line-height:1.75; color:var(--ink2);}
+
+  /* 닫는 말 */
+  .close{background:var(--wine); color:#FFF1EE; padding:88px 0 92px; margin-top:88px;}
+  .close .k{font-size:10.5px; font-weight:800; letter-spacing:.24em; text-transform:uppercase; opacity:.72;}
+  .close h3{margin-top:18px; font-family:var(--kr); font-weight:400; font-size:clamp(25px,3.9vw,40px);
+    line-height:1.38; letter-spacing:-.035em;}
+  .close h3 em{font-style:normal; color:#F0BDB6; font-weight:700;}
+  .close p{margin-top:22px; font-size:16px; line-height:1.9; opacity:.92; max-width:50ch;}
+  .close .acts{margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;}
+  .close .btn.g{background:#FFF6F3; color:var(--wine-deep);}
+  .foot{padding:32px 0 58px; text-align:center; font-size:12.5px; color:var(--muted); line-height:1.8;}
+  .foot .wmk{font-family:var(--wm); font-weight:700; font-size:22px; letter-spacing:-.035em; color:var(--ink); display:block; margin-bottom:12px;}
+  .foot .wmk i{font-style:normal; color:var(--wine);}
+</style>
+</head>
+<body>
+
+<!-- ══════════ 여는 말 ══════════ -->
+<header class="hero">
+  <div class="wash"><span class="w1"></span><span class="w2"></span><span class="w3"></span></div>
+  <div class="hin wrap">
+    <div class="lock">
+      <div class="tl">Company Briefing</div>
+      <div class="wm">Provee<i>.</i></div>
+      <div class="entag">The AI math teacher who knows you.</div>
+    </div>
+
+    <h1>시험장에는,<br /><em>학생이 혼자 앉습니다.</em></h1>
+
+    <p class="hi">문제집 두 권이 있습니다. 한 권은 세모와 지운 자국으로 얼룩졌고, 한 권은 전부 동그라미입니다.
+      동그라미를 그린 것은 학생이 아니라 AI였습니다. <b>저희는 얼룩진 쪽을 지킵니다.</b></p>
+
+    <div class="creedbox">
+      <span class="lb">Who Are We?</span>
+      <div class="txt">
+        Provee 는 수학이란 학문에 있어 사람이 가진 물리적 한계를 Ai 기술 혁신으로 극복하고
+        <em>'내 곁의' '나만의' '최고 수준'의 '진짜 교육'</em>을 실현하는 수학교육기관이다.
+      </div>
+    </div>
+
+    <div class="modebar">
+      <span class="ml">같은 이야기를 두 가지 언어로 적었습니다. 편한 쪽으로 읽어 주세요.</span>
+      <div class="seg" role="group" aria-label="읽기 방식">
+        <button type="button" data-mode-btn="plain" class="on">담백하게</button>
+        <button type="button" data-mode-btn="faith">신앙의 언어로</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ 1장 ══════════ -->
+<div class="wrap chapter up">
+  <div class="in">
+    <div class="n">01</div>
+    <h2>우리는 누구인가</h2>
+    <div class="en">WHO ARE WE?</div>
+  </div>
+</div>
+
+<!-- 02 빼앗긴 것 -->
+<section class="sec up" id="lost">
+  <div class="wrap col">
+    <div class="no"><b>01 — WHAT WAS TAKEN</b><span></span></div>
+    <h3>빼앗긴 시간과 끈기와 기쁨을,<br /><em>한 사람씩 돌려드리겠습니다.</em></h3>
+  </div>
+
+  <div class="wrap">
+    <div class="lot">
+      <div class="col" style="margin:0 auto;"><h4>① 빼앗긴 <em>시간</em></h4></div>
+      <div class="col" style="margin:0 auto;">
+        <div class="lotgrid">
+          <figure class="plate">
+            <div class="m"><img src="assets/scenes/gpt-chat-fail.jpg" alt="AI가 손글씨 식을 잘못 읽어 틀린 답을 설명하는 화면" loading="lazy" /></div>
+            <figcaption><b>log₂(2z)를 log₂(22)로 읽었습니다.</b><br />그리고 "그러므로 답은 거짓"이라고 단정합니다. 아니라고 다시 설명해야 하는 건 학생 쪽입니다.</figcaption>
+          </figure>
+          <div class="card">
+            <span class="lb">빼앗긴 것</span>
+            <p>사진을 다시 찍고, 잘못 읽은 걸 바로잡고, 처음부터 다시 설명합니다.
+              <b>문제를 푸는 시간보다 도구를 설득하는 시간이 깁니다.</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lot">
+      <div class="col" style="margin:0 auto;">
+        <h4>② 빼앗긴 <em>끈기</em></h4>
+        <p class="sub">끈기는 어려움을 통과해 본 만큼 자랍니다. 그래서 이것이 핵심입니다 —
+          <b>어떤 어려움은 제거해야 하고, 어떤 어려움은 끝까지 통과해야 합니다.</b></p>
+      </div>
+
+      <div class="duo">
+        <div class="duo-h">
+          <span class="k">한 어머니에게 두 아들이 있습니다</span>
+          <h4>누가 더 <em>수학을 잘하는</em> 학생일까요?</h4>
+        </div>
+        <div class="duo-g">
+          <figure class="son">
+            <div class="pics">
+              <img src="assets/story/junseo-boy.jpg" alt="밤늦게 연필을 쥐고 문제를 푸는 첫째 준서" loading="lazy" />
+              <img src="assets/story/junseo-book.jpg" alt="연필 풀이로 빼곡하고 빨간 세모가 그어진 준서의 문제집" loading="lazy" />
+            </div>
+            <figcaption><b>첫째, 준서</b><p>밤새 연필로 빼곡하게 풉니다.<br />문제집엔 <i>X와 세모</i>가 가득합니다.</p></figcaption>
+          </figure>
+          <div class="duo-vs"><span>VS</span></div>
+          <figure class="son">
+            <div class="pics">
+              <img src="assets/story/soomin-boy.jpg" alt="휴대폰 옆에서 빨간 펜으로 동그라미를 치며 웃는 둘째 수민" loading="lazy" />
+              <img src="assets/story/soomin-book.jpg" alt="전부 빨간 동그라미로 채워진 수민의 문제집과 휴대폰" loading="lazy" />
+            </div>
+            <figcaption><b>둘째, 수민</b><p>&ldquo;모르는 건 AI한테 물어봐야지.&rdquo;<br />문제집은 전부 <i>동그라미</i>입니다.</p></figcaption>
+          </figure>
+        </div>
+        <p class="duo-a">채점만 보면 답은 분명합니다. 그러나 그 동그라미를 그린 것은 수민이가 아니라 <b>AI였습니다.</b>
+          준서의 세모 옆에는 지우고 다시 쓴 자국이 남았습니다. <b>끈기는 그 자국 위에 쌓입니다.</b>
+          그리고 시험장에는, 둘 다 혼자 앉습니다.</p>
+      </div>
+    </div>
+
+    <div class="lot">
+      <div class="col" style="margin:0 auto;"><h4>③ 빼앗긴 <em>기쁨</em></h4></div>
+      <div class="col" style="margin:0 auto;">
+        <div class="lotgrid">
+          <figure class="plate">
+            <div class="m"><img src="assets/scenes/joy-2.jpg" alt="스스로 풀어낸 것을 설명하며 웃는 학생" loading="lazy" /></div>
+            <figcaption><b>스스로 설명해낸 순간.</b><br />이 표정은 답을 받아 적어서는 나오지 않습니다.</figcaption>
+          </figure>
+          <div class="card sol">
+            <span class="lb">우리가 지키는 선</span>
+            <p>답을 받아 적는 동안, <b>스스로 풀어냈을 때의 성취와 기쁨이 사라졌습니다.</b> 맞았는데도 왜 맞았는지 말할 수 없습니다.</p>
+            <p>마지막 한 걸음은 학생이 밟습니다. <b>대신 밟아주지 않습니다.</b> 풀어낸 사람이 학생이어야 그 순간이 학생의 것이 됩니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 선언 -->
+<section class="sec tint up" id="creed">
+  <div class="wrap col">
+    <div class="no"><b>02 — OUR POSITION</b><span></span></div>
+    <h3>어떤 어려움은 제거해야 하고,<br /><em>어떤 어려움은 끝까지 통과해야 합니다.</em></h3>
+    <p class="sub">어느 순간부터 우리는 생각하는 수고를 너무 쉽게 AI에 넘기기 시작했습니다.
+      오래 고민하는 시간, 틀린 이유를 되짚는 과정, 자기 언어로 설명해 보는 노력.
+      AI는 이 셋을 <b>'불필요한 불편'으로 분류하고 치워버렸습니다.</b> 그런데 학습과학은 정반대를 말합니다.</p>
+
+    <div class="defn">
+      <div class="dh"><b>정의</b><span>Desirable Difficulty</span></div>
+      <div class="db">
+        <p class="term">바람직한 어려움 — <em>당장은 더디지만, 오래 남는 지식을 만드는 어려움.</em></p>
+        <p class="desc">스스로 기억을 꺼내고, 풀고, 틀리고, 다시 시도하는 과정. 학습 속도를 떨어뜨리는 것처럼 보이지만
+          실제로는 파지(retention)와 전이(transfer)를 높인다는 것이 반복 확인된 결과입니다.</p>
+        <cite>Robert A. Bjork &amp; Elizabeth L. Bjork · University of California, Los Angeles</cite>
+      </div>
+    </div>
+
+    <div class="loop bad">
+      <div class="lt"><b>지금 반복되는 순환</b><span></span></div>
+      <ol class="steps">
+        <li><span class="n">01</span><p>모르는 문제를 만난다</p></li>
+        <li><span class="n">02</span><p>잠시 고민하다 AI에게 묻는다</p></li>
+        <li><span class="n">03</span><p>답을 보고 이해했다고 느낀다</p></li>
+        <li><span class="n">04</span><p>사실은 이해한 것이 아니다</p></li>
+        <li><span class="n">05</span><p>시험장에서 다시 모른다</p></li>
+      </ol>
+      <div class="backrow"><span class="ar">↺</span><p>다시 01로 — 정답은 남지만, 정답에 도달하는 능력은 남지 않습니다.</p></div>
+    </div>
+
+    <div class="fold" id="fd-creed">
+      <div class="defn">
+        <div class="dh"><b>증언</b><span>2025 · OpenAI</span></div>
+        <div class="db">
+          <p class="term">ChatGPT가 <em>"한 세대 또는 두 세대를 침묵시키고 있다."</em></p>
+          <p class="desc">학생이 자기 글을 직접 쓰지 않으면 자기 목소리를 발견할 기회도 잃는다는 경고였습니다.
+            글쓰기만의 문제가 아닙니다. 씨름한 뒤에 얻는 성취는, 결과만 빨리 받아서는 대신 얻어지지 않습니다.</p>
+          <cite>데이브 에거스 · 작가 · 샘 올트먼의 초청으로 선 OpenAI 사내 강연에서</cite>
+        </div>
+      </div>
+      <div class="amp">
+        <div><div class="h">기초가 탄탄한 사람에게</div><p>AI는 강력한 확장 도구가 됩니다. 이미 가진 사고력을 몇 배로 키웁니다.</p></div>
+        <div class="dim"><div class="h">기반이 약한 사람에게</div><p>수많은 답은 능력의 성장이 아니라, <b>능력의 공백을 가리는 장치</b>가 됩니다.</p></div>
+      </div>
+    </div>
+    <div class="foldwrap">
+      <button class="foldbtn" type="button" data-fold="fd-creed" aria-expanded="false" aria-controls="fd-creed">
+        <span>왜 그런지 더 읽기</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="loop good" style="margin-top:34px;">
+      <div class="lt"><b>Provee가 만드는 순환</b><span></span></div>
+      <ol class="steps">
+        <li><span class="n">01</span><p>모르는 문제를 만난다</p></li>
+        <li><span class="n">02</span><p>스스로 끝까지 써 본다</p></li>
+        <li><span class="n">03</span><p>막힌 지점을 짚고 되묻는다</p></li>
+        <li><span class="n">04</span><p>자기 언어로 다시 설명한다</p></li>
+        <li><span class="n">05</span><p>설명할 수 있게 된다</p></li>
+      </ol>
+      <div class="backrow win"><span class="ar">↑</span><p>여기서 끝나지 않고 쌓입니다 — 다음 문제에서 다시 쓰입니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 창립자 -->
+<section class="sec up" id="founder">
+  <div class="wrap col">
+    <div class="no"><b>03 — WHY THIS PERSON</b><span></span></div>
+    <h3>저는 제 약점을 없애지 못했습니다.<br />대신, <em>그 약점이 이 앱을 만들게 했습니다.</em></h3>
+    <p class="sub">첫 번째 사용자가 창립자 자신이었습니다. 무너져 본 자리를 알기에, 어디에 발판을 놓아야 하는지 압니다.
+      <b>김수민 · 창립자 · 경제학과 3학년에서 시작</b></p>
+
+    <div style="margin-top:34px;">
+      <div class="chap">
+        <div class="side">하나 · 시작</div>
+        <div>
+          <p class="big2">저는 평범한 경제학과 3학년이었습니다. 뒤늦게 학문에 열정이 생겼지만, 열정만큼 실력이 따라주지 않았습니다.</p>
+          <p class="sm">선형대수와 수리통계 같은 과목 앞에서 저는 늘 무너졌습니다. 집중력도, 이해력도, 근성도 부족하다고 매일 자책했습니다.</p>
+        </div>
+      </div>
+      <div class="chap only-plain">
+        <div class="side">그때</div>
+        <div>
+          <p class="big2">밤마다 저를 다그쳤습니다. <em>더 집중하자고, 더 버티자고.</em></p>
+          <p class="sm">기말고사까지 사투했지만, 상황은 드라마틱하게 바뀌지 않았습니다.</p>
+        </div>
+      </div>
+      <div class="chap only-faith">
+        <div class="side">그때</div>
+        <div>
+          <p class="big2">매일 새벽 기도했습니다. <em>지혜를, 집중력을, 끈기를 달라고.</em></p>
+          <p class="sm">기말고사까지 사투했지만, 상황은 드라마틱하게 바뀌지 않았습니다.</p>
+        </div>
+      </div>
+      <div class="chap">
+        <div class="side">둘 · 전환<em>2026. 06. 13.</em></div>
+        <div>
+          <p class="big2">그러다 깨달았습니다. 이렇게 어려움을 겪는 게 <em>나 혼자만은 아닐 거라고.</em></p>
+          <p class="sm">나를 위한, 나 같은 사람들을 위한 앱을 만들기 시작했습니다.</p>
+        </div>
+      </div>
+      <div class="chap">
+        <div class="side">셋 · 병행</div>
+        <div>
+          <p class="big2">이 앱은 제게 지식만이 아니라, <em>그 지식을 설명할 수 있는 능력</em>을 주었습니다.</p>
+          <p class="sm">기말고사를 준비하며 앱을 함께 개발했고, 공부한 범위에서 저는 크게 성장했습니다.
+            이 앱의 첫 번째 수요자가 누구냐고 묻는다면, 저는 '나 자신'이라고 답합니다.</p>
+        </div>
+      </div>
+      <div class="chap only-plain">
+        <div class="side">우리가 배운 것</div>
+        <div>
+          <p class="big2">저는 제 약점을 없애지 못했습니다. 대신, <em>그 약점이 이 앱을 만들게 했습니다.</em></p>
+          <p class="sm">제가 뛰어난 학생이었다면, 이 앱은 존재하지 않았을 겁니다. 가장 약했던 자리가, 가장 많은 사람을 도울 출발점이 되었습니다.</p>
+        </div>
+      </div>
+      <div class="chap only-faith">
+        <div class="side">우리가 믿는 것</div>
+        <div>
+          <p class="big2">하나님은 제 약점을 없애지 않으셨습니다. <em>그 약점을 들어 쓰셨습니다.</em></p>
+          <p class="sm">제가 뛰어난 학생이었다면, 이 앱은 존재하지 않았을 겁니다. 완벽한 자가 아니라, 구하는 자와 깨어진 자가 쓰임받습니다.</p>
+          <p class="verse">"내 은혜가 네게 족하다. 이는 내 능력이 약한 데서 온전하여짐이라."<span>고린도후서 12:9</span></p>
+        </div>
+      </div>
+      <p class="sclose">지식과 의지가 부족하여 낙담한 이들에게 다가가, 그들을 일으키고 싶습니다.
+        <em>설명할 수 있을 때까지, 끈질기게.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 미션 -->
+<section class="sec tint up" id="vision">
+  <div class="wrap col">
+    <div class="no"><b>04 — OUR VISION</b><span></span></div>
+    <h3>우리는 <em>낙담한 이들을 일으키는</em> 회사가 되려 합니다.</h3>
+  </div>
+
+  <div class="wrap">
+    <div class="board only-plain">
+      <div class="scene">
+        <span class="sn">01</span>
+        <p class="big3">잘하고 싶은데 마음만큼 되지 않아, <em>낙담해 본 사람</em>이 있습니다.</p>
+        <p class="sm3">집중력도 이해력도 근성도 부족하다고 스스로를 몰아세우던 밤. 창립자가 지나온 자리이고, 우리가 가장 먼저 떠올리는 사람입니다.</p>
+      </div>
+      <div class="scene">
+        <span class="sn">02</span>
+        <p class="big3">개인화된 교육은 <em>너무 비쌉니다.</em></p>
+        <p class="sm3">나를 아는 선생님을 붙이는 데는 큰 돈이 듭니다. 그래서 가장 필요한 사람이 가장 먼저 밀려납니다.</p>
+      </div>
+      <div class="scene">
+        <span class="sn">03</span>
+        <p class="big3">우리는 <em>살 수 있는 가격으로</em> 그 자리에 갑니다.</p>
+        <p class="sm3">1:1 과외 월 30만원, 인강 월 14만원, 우리는 월 9.9만원. 그 가격도 닿지 않는 자리에는 지자체가 값을 대는 통로로 갑니다.</p>
+      </div>
+      <div class="scene">
+        <span class="sn">04</span>
+        <p class="big3">첫 사용자로는 <em>목회자와 선교사의 자녀들</em>을 먼저 만나려 합니다.</p>
+        <p class="sm3">흩어져 있고, 옮겨 다니고, 학원이 닿지 않습니다. 우리가 만든 것이 맞는지 가장 빨리 알 수 있는 조건입니다.</p>
+      </div>
+      <div class="scene last">
+        <span class="sn">05</span>
+        <p class="big3">이것을 얼마나 해냈는지는 <em>세지 않겠습니다.</em></p>
+        <p class="sm3">세기 시작하면, 숫자를 위해 하게 됩니다. 한 사람씩 일으키는 것. 그것이 이 회사가 존재하는 이유입니다.</p>
+      </div>
+    </div>
+
+    <div class="board only-faith">
+      <div class="scene">
+        <span class="sn">01</span>
+        <p class="big3">처음에는 하나님을 위한다고 했지만, 사실은 <em>나의 성공을 위해</em> 기도했습니다.</p>
+        <p class="sm3">하나님을 사업의 성공을 위해 이용했습니다. 그것을 인정하는 데서 다시 시작했습니다.</p>
+      </div>
+      <div class="scene">
+        <span class="sn">02</span>
+        <p class="big3">베다니라는 가난한 마을에, 삼남매의 막내 <em>마리아</em>가 살았습니다.</p>
+        <p class="sm3">넉넉하지 않은 형편에도 예수님과 제자들을 대접하는 것을 기뻐한 사람입니다. <b>예수님은 나의 작은 것, 초라한 것을 기뻐하십니다.</b></p>
+      </div>
+      <div class="scene">
+        <span class="sn">03</span>
+        <p class="big3">그 마리아는 향유 옥합을 <em>온전히 깨뜨렸습니다.</em></p>
+        <p class="sm3">팔레스타인에서는 나지 않던 향유였고, 죽은 자를 장사 지낼 때 두세 방울씩 뿌리던 것이었습니다.
+          그것을 통째로 예수님의 발 앞에 붓고, 자신의 머리카락으로 그 발을 닦았습니다.</p>
+      </div>
+      <div class="fold" id="fd-vision">
+        <div class="scene">
+          <span class="sn">04</span>
+          <p class="big3">액체는 땅에 더 많이 떨어졌습니다. <em>계산으로는 어리석은 일이었습니다.</em></p>
+          <p class="sm3">그러나 마리아에게 중요한 것은 효율이 아니라, 결국 <b>예수님께 닿는 것</b>이었습니다.</p>
+        </div>
+        <div class="scene">
+          <span class="sn">05</span>
+          <p class="big3">우리의 시간과 젊음과 돈과 능력도 <em>언젠가 사라집니다.</em></p>
+          <p class="sm3">그래서 저도 그 발에 닿는 인생이 되고 싶었습니다. 회사도 그렇게 되기를 바랐습니다.</p>
+        </div>
+        <div class="scene">
+          <span class="sn">06</span>
+          <p class="big3">"무엇을 드릴까요" 물었을 때, 제게 있는 것은 <em>기술뿐</em>이었습니다.</p>
+          <p class="sm3">"이 기술을 어떻게 드릴까요" 다시 물었더니, <b>나의 종들을 섬기라</b>는 마음을 주셨습니다.</p>
+        </div>
+        <div class="scene last">
+          <span class="sn">07</span>
+          <p class="big3">그래서 우리는 <em>목회자의 자녀와 선교사의 자녀</em>를 섬깁니다.</p>
+          <p class="sm3">우리나라에 흩어진 목회자의 자녀(PK), 전 세계에 흩어진 선교사의 자녀(MK).
+            그들의 수학 교육을 전적으로 섬기는 기업이 되겠습니다.</p>
+        </div>
+      </div>
+      <div class="foldwrap">
+        <button class="foldbtn" type="button" data-fold="fd-vision" aria-expanded="false" aria-controls="fd-vision">
+          <span>이어지는 이야기 읽기</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="vclose">
+      <p class="only-plain">잘하고 싶은데 마음만큼 되지 않던 사람에게, <em>살 수 있는 가격으로</em> 닿겠습니다.</p>
+      <p class="only-faith">향유가 땅에 쏟아지더라도, <em>닿는 것</em>이 중요했던 그 마음으로.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 2장 ══════════ -->
+<div class="wrap chapter up">
+  <div class="in">
+    <div class="n">02</div>
+    <h2>어떻게 사업을 만드는가</h2>
+    <div class="en">HOW WE BUILD THE BUSINESS</div>
+  </div>
+</div>
+
+<!-- 06 시장 -->
+<section class="sec up" id="market">
+  <div class="wrap col">
+    <div class="no"><b>05 — OUR MARKET</b><span></span></div>
+    <h3>시장은 줄어든 게 아니라,<br /><em>둘로 갈라졌습니다.</em></h3>
+    <p class="sub">손글씨 인식과 추론 모델이 이제야 '풀이 과정'을 읽을 수준에 도달했습니다. 2~3년 전에는 만들 수 없던 제품입니다.
+      동시에 학생들은 답을 너무 쉽게 얻게 되었습니다. <b>도구가 준비된 시점과 문제가 커진 시점이 겹칩니다.</b></p>
+
+    <div class="mstat">
+      <div><div class="v">2.5조원</div><p>고교 수학 사교육 시장. 고교 사교육 전체 7.8조 중 수학이 가장 큽니다.</p></div>
+      <div><div class="v">−6.3만명</div><p>2025년 한 해 수학 사교육에서 이탈한 학생. 10년 중 가장 큰 폭입니다.</p></div>
+      <div><div class="v">39.1만원</div><p>남은 학생의 월평균 사교육비. 시장은 줄어든 게 아니라 둘로 갈라졌습니다.</p></div>
+    </div>
+    <p class="pnote">출처: 국가데이터처·교육부 「2025년 초중고사교육비조사」 —
+      이탈한 수요는 가격으로 다시 부르고, 남은 수요에는 프리미엄 보완재로 들어갑니다.
+      수학 사교육 참여자는 약 54.8만 명으로 추정됩니다(참여자 수·감소분은 고교 학생 수와 수학 참여율을 이용한 자체 추정).</p>
+
+    <p class="sub" style="margin-top:30px;"><b>하나의 손글씨 분석 엔진, 세 개의 시장.</b>
+      같은 엔진이 개인에게는 과외 선생님이, 학원에는 진단 도구가, 지자체에는 교육 사다리가 됩니다.</p>
+  </div>
+</section>
+
+<!-- 07 값 -->
+<section class="sec tint up" id="model">
+  <div class="wrap col">
+    <div class="no"><b>06 — OUR BUSINESS MODEL</b><span></span></div>
+    <h3>쓰는 사람과 내는 사람이 다르면,<br /><em>파는 방법도 달라야 합니다.</em></h3>
+    <p class="sub">고등학생은 학부모가 결제하니 월 구독으로, 대학생은 본인이 결제하고 시험기간에만 몰리니 기간권으로 팝니다.</p>
+
+    <div style="margin-top:26px;">
+      <div class="prow"><div class="t">중·고등학생 정기 구독<span>사용자 ≠ 결제자</span></div><div class="v">월 99,000원</div></div>
+      <div class="prow"><div class="t">대학생 · 24시간의 전사<span>사용자 = 결제자</span></div><div class="v">9,900원</div></div>
+      <div class="prow"><div class="t">대학생 · 3일의 전사</div><div class="v">19,000원</div></div>
+      <div class="prow"><div class="t">대학생 · 일주일의 전사</div><div class="v">29,000원</div></div>
+      <div class="prow"><div class="t">대학생 · 중간고사 패스 3주</div><div class="v tbd">확정 후 채웁니다</div></div>
+      <div class="prow"><div class="t">학원 좌석 단가 · 지자체 단가</div><div class="v tbd">확정 후 채웁니다</div></div>
+    </div>
+    <p class="pnote">패스는 짧을수록 하루당 단가가 높습니다 — 급할수록 비싸고, 길게 살수록 이득인 구조입니다.</p>
+
+    <div class="bars">
+      <div class="bar"><span class="nm">밀당 PT</span><span class="tr"><span class="fl" style="width:100%"></span></span><span class="pv">38만원</span></div>
+      <div class="bar"><span class="nm">1:1 과외</span><span class="tr"><span class="fl" style="width:79%"></span></span><span class="pv">30만원</span></div>
+      <div class="bar"><span class="nm">인강</span><span class="tr"><span class="fl" style="width:37%"></span></span><span class="pv">14만원</span></div>
+      <div class="bar us"><span class="nm">Provee</span><span class="tr"><span class="fl" style="width:26%"></span></span><span class="pv">9.9만원</span></div>
+    </div>
+    <p class="pnote">밀당PT·인강 가격은 공개 요금 기준.
+      <b style="color:var(--wine-deep)">과외급 개인화를 인강보다 낮은 가격에 — 이 자리가 저희 포지션입니다.</b></p>
+
+    <div class="card" style="margin-top:30px;">
+      <span class="lb">원가</span>
+      <p>문제 하나를 처리하는 실측 원가는 <b>104원</b>입니다. 그중 <b>38%가 채점</b>에서 나갑니다.
+        가장 비싼 공정이 채점이라는 것은, 가장 어려운 일이 채점이라는 뜻이기도 합니다.</p>
+      <p style="font-size:13.5px; color:var(--muted);">MVP 실측 구간(학생 4명 표본, 2026년 7월) 기준이며 모델과 문항 길이에 따라 달라집니다.
+        이 숫자로 마진을 계산하기에는 아직 물량이 없습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 우리가 서야 할 자리 -->
+<section class="sec up" id="edge">
+  <div class="wrap col">
+    <div class="no"><b>07 — OUR EDGE</b><span></span></div>
+    <h3>"손글씨 돼요"라는 말에는<br /><em>세 가지 뜻</em>이 있습니다.</h3>
+    <p class="sub">같은 문장을 쓰지만 실제로 하는 일은 전혀 다릅니다. 우리가 서 있는 자리를 분명히 하려고, 세 층위로 나눠 적습니다.</p>
+
+    <div class="layers">
+      <div class="layer"><span class="lv">Layer 1</span><span class="tx"><b>찍어서 인식</b> — 사진 속 수식을 글자로 바꿉니다. 풀이 과정은 보지 않습니다.</span><span class="who">사진 검색 앱</span></div>
+      <div class="layer"><span class="lv">Layer 2</span><span class="tx"><b>단계 채점</b> — 정해진 형식으로 입력한 단계를 맞다·틀리다로 나눕니다.</span><span class="who">적응학습 서비스</span></div>
+      <div class="layer us"><span class="lv">Layer 3</span><span class="tx"><b>과정 진단</b> — 손으로 그린 도형과 그래프까지, 쓰는 도중의 흐름을 읽고 끊긴 지점을 짚습니다.</span><span class="who">Provee</span></div>
+    </div>
+    <p class="pnote">이 세 축을 하나의 학습 흐름으로 잇는 것이 Provee가 <b style="color:var(--wine-deep)">증명하려는</b> 지점입니다.
+      2026년 7월 자체 조사 21개사 기준이며, 이 분야는 빠르게 움직입니다.
+      가장 가까운 신생 경쟁사는 스터디에이(넥스트웹)로 보고 있습니다.</p>
+
+    <h3 style="margin-top:60px;">한국에서만 나오는 손글씨 데이터로<br /><em>파인튜닝된 모델과 진짜 교육.</em></h3>
+    <p class="sub">해자를 세 층으로 나눠 적습니다. 아래층이 위층을 받칩니다.</p>
+
+    <div class="moat">
+      <div class="mo">
+        <div class="lv">Layer 1 — Data</div>
+        <h5>세계에서 가장 조밀한 손글씨 수학 스트림</h5>
+        <p>한국 고교생 자습 <b>125분/일</b>, 미국 <b>45분/일</b> — 2.8배. 핵심은 양이 아니라 형태입니다.
+          사진이 아니라 <b>획·지움·멈춤을 벡터로</b> 잡습니다. 최종 답은 이미 상품화됐지만,
+          학생이 밟은 경로는 아직 아무도 소유하지 않았습니다.</p>
+        <span class="st on">축적 중</span>
+      </div>
+      <div class="mo">
+        <div class="lv">Layer 2 — Model</div>
+        <h5>API 래퍼가 아닌 수학 특화 스택</h5>
+        <p>축적한 데이터로 손글씨 추론에 파인튜닝해, 범용 API 호출자가 맞출 수 없는
+          <b>원가·정확도 구조</b>를 만들려 합니다.</p>
+        <span class="st">아직 학습 전</span>
+      </div>
+      <div class="mo">
+        <div class="lv">Layer 3 — Pedagogy</div>
+        <h5>언제 개입하고 언제 침묵할 것인가</h5>
+        <p>humanlike를 넘어 <b>teacher-like</b>. 답을 내주는 엔진은 그 판단을 관측한 적이 없습니다.
+          기능 목록으로 정의한 해자는 따라잡히지만, 개입 시점 판단은 따라잡기 어렵습니다.</p>
+        <span class="st on">설계·운영 중</span>
+      </div>
+    </div>
+    <p class="pnote">자습시간 출처: 2024 KOSIS 생활시간조사 / U.S. BLS American Time Use Survey.
+      2.8배는 자습시간 비율에서 나온 값이며, 손글씨 양을 직접 실측한 수치는 아닙니다.
+      그리고 기술만으로 해자가 되지는 않는다고 봅니다 — 결국 쓰고 싶은 하나의 앱이자 문화가 되어야 합니다.</p>
+  </div>
+</section>
+
+<!-- 09 아직 확인하지 못한 자리 -->
+<section class="sec tint up" id="q">
+  <div class="wrap col">
+    <div class="no"><b>08 — THE QUESTION WE HAVEN'T ANSWERED</b><span></span></div>
+    <h3>아직 아무것도 확인하지 못한<br /><em>자리가 하나 있습니다.</em></h3>
+    <p class="sub">이 문서의 다른 숫자에는 모두 표본이 붙어 있습니다. 이 자리에는 붙일 숫자가 없습니다.
+      <b>인터뷰 0건입니다.</b></p>
+
+    <div class="card" style="margin-top:28px;">
+      <span class="lb">우리가 아는 것</span>
+      <p>창립자는 411th Contracting Support Brigade에서 근무했습니다. 그래서 아는 것은 하나뿐입니다 —
+        그곳의 공부는 학원가의 공부와 모양이 다르다는 것. 부대가 옮겨 다니고, 시간이 쪼개지고, 결국 혼자 앉아서 합니다.</p>
+      <p>저희가 만들고 있는 것도 혼자 앉는 사람을 위한 도구입니다. 겹치는 부분이 있어 <b>보입니다.</b>
+        "보입니다"까지가 지금 말할 수 있는 전부입니다.</p>
+      <p>한 가지 더 겹치는 것이 있습니다. 저희가 먼저 만나려는 선교사의 자녀들도 흩어져 있고, 옮겨 다니고, 학원이 닿지 않습니다.
+        같은 조건입니다. 그래서 이 질문을 하게 되었습니다.</p>
+    </div>
+
+    <div class="card" style="margin-top:13px;">
+      <span class="lb">이미 있는 것</span>
+      <p>미 국방부에는 DANTES의 Academic Skills Training과 OASC 같은 무료 학습 지원이 이미 있습니다.
+        <b>빈 자리가 아닙니다.</b> 그래서 "이 시장은 비어 있다"는 문장은 쓰지 않습니다.
+        저희가 먼저 왔다고 말할 수 있는 자리가 아닙니다.</p>
+    </div>
+
+    <div class="card" style="margin-top:13px;">
+      <span class="lb">하지 않을 것</span>
+      <p>조달 절차에 관해, 공개되지 않은 정보는 여쭙지 않습니다.<br />
+        어떤 편의도 부탁드리지 않습니다.<br />
+        이 자리를 실적이나 파이프라인으로 적지 않습니다. 이 문서 어디에도 그렇게 적혀 있지 않습니다.</p>
+    </div>
+
+    <div class="card sol" style="margin-top:13px;">
+      <span class="lb">부탁드리는 것 — 하나뿐입니다</span>
+      <p>복무 중인 분들 <b>8~12명</b>과, 한 분당 <b>30분</b>씩 이야기하고 싶습니다. 여쭐 것은 세 가지입니다.</p>
+      <p><b>01</b> 최근 6개월 안에 수학이나 시험 준비로 앉았던 적이 있는지. 있었다면 어디에 앉아, 무엇을 펴 놓고 했는지.<br />
+        <b>02</b> 그때 무엇을 썼고, 어디서 그만뒀는지.<br />
+        <b>03</b> 이미 있는 무료 지원을 써 보셨는지. 안 쓰셨다면, 왜 안 쓰셨는지.</p>
+      <p>듣기만 합니다. 팔지 않습니다. 녹취는 동의를 받은 것만 하고, 이름은 남기지 않습니다.
+        확인되면 다음 판에 숫자와 표본을 적고, 확인되지 않으면 이 자리는 지웁니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 비워 둔 것 -->
+<section class="sec up" id="empty">
+  <div class="wrap col">
+    <div class="no"><b>09 — WHAT WE LEFT EMPTY</b><span></span></div>
+    <h3>없는 말을 지어<br /><em>채우지 않기로 했습니다.</em></h3>
+
+    <div class="empty">
+      <div class="erow"><div class="k">후기</div><div class="d">베타 전입니다. 첫 후기가 도착하면 이 자리에 놓입니다.</div></div>
+      <div class="erow"><div class="k">B2B·B2G 단가</div><div class="d">확정 후 채웁니다.</div></div>
+      <div class="erow"><div class="k">참여자 수</div><div class="d">자체 추정입니다. 계산 방식은 자료실에 있습니다.</div></div>
+      <div class="erow"><div class="k">파인튜닝</div><div class="d">데이터는 쌓고 있으나 아직 학습 전입니다.</div></div>
+      <div class="erow"><div class="k">군 관련</div><div class="d">인터뷰 0건입니다. 확인되면 적고, 안 되면 지웁니다.</div></div>
+      <div class="erow"><div class="k">매출</div><div class="d">없습니다.</div></div>
+    </div>
+
+    <p class="sub" style="margin-top:30px;">지금 있는 것은 사전 수요조사에서 학생들이 한 말입니다.
+      <b>주관식 원문 그대로이며 맞춤법은 고치지 않았습니다.</b></p>
+    <div class="quotes">
+      <div class="qt">
+        <p>"나의 풀이를 분석해서 어느 부분에서 실수를 하는지나 나의 사고방식등을 분석해주고 도와줬으면 좋겠다."</p>
+        <div class="who">고등학교 2학년</div>
+      </div>
+      <div class="qt">
+        <p>"칭찬해주세용"</p>
+        <div class="who">고등학교 2학년</div>
+      </div>
+    </div>
+    <p class="pnote">자체 사전 수요조사 · 2026-07 · 온라인 · 유효응답 101명(중·고등학생 38명, 대학생 63명).
+      중·고등학생 사용 의향 84%, 필요 기능 1위는 손으로 쓴 풀이 과정 분석 66%였습니다.
+      사용 경험이 아니라 사용 의향이며, 그 차이를 저희도 알고 있습니다.</p>
+  </div>
+</section>
+
+<!-- 11 팀 -->
+<section class="sec tint up" id="team">
+  <div class="wrap">
+    <div class="col" style="margin:0 auto;">
+      <div class="no"><b>10 — OUR TEAM</b><span></span></div>
+      <h3><em>깨어진 자리에서</em> 시작한 사람들.</h3>
+      <p class="sub">각자의 자리에서 이 문제를 붙들고 있습니다.
+        LLM 수학 추론을 연구하는 NeurIPS 2025 공동 제1저자가 기술 자문으로 함께합니다.</p>
+    </div>
+
+    <div class="lead-mem">
+      <div class="ph"><img src="assets/team/sm-full.jpg" alt="김수민 창립자" /></div>
+      <div class="bd">
+        <h4>김수민</h4>
+        <span class="ro">CEO · 창립자</span>
+        <div class="sch">서강대학교 경제학 · 공공인재학</div>
+        <ul class="pts">
+          <li><span class="pk">교육 현장 경험</span><span class="pd">대형 수학학원 강사 · 한미 중고생 과외 · 청소년 멘토링, 약 5년</span></li>
+          <li><span class="pk">채점 로직 설계</span><span class="pd">계량경제학 · 수리통계학 기반</span></li>
+          <li><span class="pk">AI Product Builder</span><span class="pd">자신을 첫 사용자로 MVP 전 과정을 직접 구현·고도화</span></li>
+          <li><span class="pk">AI 연구 경험</span><span class="pd">서강대 AI금융 'Hermes Agent' 연구·설계</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="team">
+      <div class="mem">
+        <div class="hd">
+          <span class="av"><img src="assets/team/jm.jpg" alt="최지민" loading="lazy" /></span>
+          <div><div class="nm">최지민</div><div class="ro">CTO</div><div class="sch">인하대학교 경제학 · 소프트웨어융합공학</div></div>
+        </div>
+        <ul class="pts">
+          <li><span class="pk">B2B 개발</span><span class="pd">중기부 예비창업패키지 선정 서비스 프론트엔드 개발</span></li>
+          <li><span class="pk">SaaS 개발</span><span class="pd">TIPS 선정 스타트업 버티컬 SaaS 소프트웨어 엔지니어</span></li>
+          <li><span class="pk">B2C AI 제품 리드</span><span class="pd">AI 서비스 개발 총괄 · 모두의창업 및 AI Rookie 진출</span></li>
+          <li><span class="pk">AI 연구 성과</span><span class="pd">AI 3D 생성 연구 제1저자 · KSCI 우수논문상</span></li>
+        </ul>
+      </div>
+
+      <div class="mem">
+        <div class="hd">
+          <span class="av"><img src="assets/team/jb.jpg" alt="손정범" loading="lazy" /></span>
+          <div><div class="nm">손정범</div><div class="ro">Head of Backend &amp; Data</div><div class="sch">홍익대학교 컴퓨터공학</div></div>
+        </div>
+        <ul class="pts">
+          <li><span class="pk">산학협력 과제</span><span class="pd">365mc병원 캐뉼라 팁 좌표 추적기 개발</span></li>
+          <li><span class="pk">AI 연구</span><span class="pd">U-Net + ViViT 기반 이상 탐지 모델 설계 · 구현</span></li>
+          <li><span class="pk">교육 현장</span><span class="pd">해외 거주 초중고생 과외 6개월</span></li>
+        </ul>
+      </div>
+
+      <div class="mem">
+        <div class="hd">
+          <span class="av"><img src="assets/team/ew.jpg" alt="김은우" loading="lazy" /></span>
+          <div><div class="nm">김은우</div><div class="ro">해외 마케팅 총괄</div><div class="sch">이화여자대학교 융합전자반도체공학부</div></div>
+        </div>
+        <ul class="pts">
+          <li><span class="pk">글로벌 역량</span><span class="pd">영국·베트남 10년 거주 · 영국 중등교육 전 과정 · 영어 네이티브</span></li>
+          <li><span class="pk">SNS 성과</span><span class="pd">이화여대 스키팀 릴스 10편 누적 52만 회 · 평균 5.2만 회</span></li>
+          <li><span class="pk">글로벌 브랜드</span><span class="pd">에센허브 글로벌 앰버서더로 릴스 기획·제작·운영</span></li>
+          <li><span class="pk">수학 교육</span><span class="pd">영국 현지 학생 멘토링 1년 6개월 · UKMT Gold 3회 수상 및 교내 1위</span></li>
+        </ul>
+      </div>
+
+      <div class="mem">
+        <div class="hd">
+          <span class="av"><img src="assets/team/sb.jpg" alt="윤세빈" loading="lazy" /></span>
+          <div><div class="nm">윤세빈</div><div class="ro">Head of Brand Strategy</div><div class="sch">서강대학교 경영학</div></div>
+        </div>
+        <ul class="pts">
+          <li><span class="pk">국제 교류</span><span class="pd">치앙마이대학교(CMU) 교류 프로그램 학생대표</span></li>
+          <li><span class="pk">미디어 콘텐츠</span><span class="pd">서강대 학생기자 · 누적 조회수 700만</span></li>
+          <li><span class="pk">리더십·기획</span><span class="pd">몽골 교육봉사 총괄·기획팀장</span></li>
+          <li><span class="pk">교육 멘토링</span><span class="pd">입학처 고교 멘토링 · 한국장학재단 수학 멘토링</span></li>
+        </ul>
+      </div>
+
+      <div class="mem">
+        <div class="hd">
+          <span class="av"><img src="assets/team/js.jpg" alt="임준서" loading="lazy" /></span>
+          <div><div class="nm">임준서</div><div class="ro">시장 · 경제 리서치 자문</div><div class="sch">서강대학교 경제학</div></div>
+        </div>
+        <ul class="pts">
+          <li><span class="pk">학업 성취</span><span class="pd">Dean's List 2회 · 서강대학교 총장상</span></li>
+          <li><span class="pk">금융 리서치</span><span class="pd">서강대학교 금융투자학회 SRS 수료</span></li>
+          <li><span class="pk">리서치 성과</span><span class="pd">5개 대학 연합 KEYSS 리서치 대회 우승</span></li>
+          <li><span class="pk">교육 현장</span><span class="pd">중·고등학생 수학·영어 과외 2년</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col" style="margin:0 auto;">
+      <div class="advisor">
+        <div class="hd">
+          <span class="av"><img src="assets/team/kt.jpg" alt="김근태" loading="lazy" /></span>
+          <div>
+            <div class="lb">AI Technical Advisor</div>
+            <div class="nm">김근태</div>
+            <div class="sch">한양대학교 컴퓨터공학 박사과정 · LLM 수학 추론 연구</div>
+          </div>
+          <div class="hl">
+            <div class="t">NeurIPS 2025 공동 제1저자</div>
+            <div class="s">AI·ML 세계 최고 권위 학회 · 2025 채택률 24.52%</div>
+          </div>
+        </div>
+        <div class="tags">
+          <div><b>Multimodal AI · Vision-Language</b> → 손글씨 · 도형 인식</div>
+          <div><b>LLM Post-training · Reasoning</b> → AI 채점 엔진</div>
+          <div><b>Hallucination · Interpretability</b> → 학습 분석 신뢰성</div>
+          <div><b>NeurIPS · ICML · CVPR</b> → Reviewer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 앞으로 -->
+<section class="sec up" id="next">
+  <div class="wrap col">
+    <div class="no"><b>11 — OUR NEXT MOVE</b><span></span></div>
+    <h3>지금은 <em>함께 써 볼 사람</em>을<br />만나는 중입니다.</h3>
+    <p class="sub">한국에서 검증한 뒤 미국으로 가는 순서가 아니라, 처음부터 미국 기준으로 만드는 순서를 택했습니다.
+      <b>미국용으로 준비하는 것이 곧 전세계용으로 준비하는 것</b>이라고 보고 방향을 그렇게 잡았습니다.</p>
+  </div>
+  <div class="wrap">
+    <div class="road">
+      <div class="stop done"><div class="w">2026 · 7월 — 완료</div><h5>MVP 검증</h5>
+        <p>학생 18명이 손글씨 풀이를 실제로 올려 채점 전 과정을 검증했습니다.</p></div>
+      <div class="stop done"><div class="w">2026 · 8월 — 완료</div><h5>Plug and Play 피칭</h5>
+        <p>미국 액셀러레이터에서 데모를 선보였습니다. 선발이나 투자가 확정된 것은 아닙니다.</p></div>
+      <div class="stop"><div class="w">2026 · 9월</div><h5>법인 설립 · 2차 베타 200명</h5>
+        <p>9월 말 설립을 목표로 준비 중입니다. 구조는 검토 단계입니다. 목회자·선교사 자녀 200명이 한 달간 실제 시험공부에 씁니다.</p></div>
+      <div class="stop"><div class="w">2026 · 10–11월</div><h5>학원 파일럿 · 문제 소싱</h5>
+        <p>학원 현장에서 반 단위로 쓰며 운영성을 봅니다. 문제 콘텐츠 공급도 함께 논의합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 닫는 말 -->
+<section class="close up">
+  <div class="wrap col">
+    <div class="k">What we ask</div>
+    <h3>아직 라운드를 열지 않았습니다.<br /><em>틀린 자리를 짚어 주십시오.</em></h3>
+    <p>법인이 서면 그때 정식으로 말씀드리겠습니다. 지금 부탁드리는 것은 이 문서에서 과장된 곳, 근거가 얇은 곳,
+      저희가 스스로 못 보고 있는 곳을 짚어 주시는 것입니다. 제품은 열어 두었으니 직접 써 보셔도 좋습니다.</p>
+    <div class="acts">
+      <a class="btn g" href="mailto:soomin.kim@urpedu.com?subject=Provee">이야기 나누기</a>
+      <a class="btn g" href="https://provee-mvp.vercel.app/#student" target="_blank" rel="noopener">제품 열어 보기</a>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <span class="wmk">Provee<i>.</i></span>
+  본 자료는 초대받은 분을 위한 회사 소개서입니다. 제품과 계획은 진행에 따라 달라질 수 있습니다.<br />
+  설문 수치는 자체 사전 수요조사(2026-07, 온라인, 유효응답 101명) 기준이며, 사용 의향은 실제 사용 결과가 아닙니다.
+</div>
+
+<script>
+  // 읽기 방식
+  function setMode(m){
+    document.documentElement.setAttribute('data-mode', m);
+    document.querySelectorAll('[data-mode-btn]').forEach(b => b.classList.toggle('on', b.dataset.modeBtn === m));
+    try{ localStorage.setItem('provee_mode', m); }catch(e){}
+  }
+  document.querySelectorAll('[data-mode-btn]').forEach(b => b.addEventListener('click', () => setMode(b.dataset.modeBtn)));
+  try{ const s = localStorage.getItem('provee_mode'); if(s) setMode(s); }catch(e){}
+
+  // 접기
+  document.querySelectorAll('.foldbtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const el = document.getElementById(btn.dataset.fold);
+      const open = el.getAttribute('data-open') === 'true';
+      el.setAttribute('data-open', String(!open));
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.querySelector('span').textContent = !open ? '접기' : btn.dataset.fold === 'fd-vision' ? '이어지는 이야기 읽기' : '왜 그런지 더 읽기';
+    });
+  });
+
+  // 등장
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .08 });
+  document.querySelectorAll('.up').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
